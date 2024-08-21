@@ -1,0 +1,19 @@
+2024-08-22 09:55:52.054 +12:00 [DBG] ********************************************************************************
+2024-08-22 09:55:52.060 +12:00 [INF] ********************************************************************************
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-22 09:55:52.060 +12:00 [INF] ********************************************************************************
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-22 09:55:52.060 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-22 09:55:52.060 +12:00 [INF] ********************************************************************************
+2024-08-22 09:55:52.060 +12:00 [INF] ********************************************************************************
+2024-08-22 09:55:56.056 +12:00 [INF] The number of languages:  4
+2024-08-22 09:55:56.697 +12:00 [INF] Check the number of existing languages: 3
+2024-08-22 09:55:56.805 +12:00 [INF] Check the number of existing languages: 2
+2024-08-22 09:55:58.024 +12:00 [ERR] Error while clicking element. element click intercepted: Element <div class="ns-box-inner">...</div> is not clickable at point (1359, 101). Other element would receive the click: <div class="ns-box-inner">...</div>
+  (Session info: chrome=126.0.6478.127)

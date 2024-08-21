@@ -1,0 +1,17 @@
+2024-08-22 09:50:19.730 +12:00 [DBG] ********************************************************************************
+2024-08-22 09:50:19.736 +12:00 [INF] ********************************************************************************
+2024-08-22 09:50:19.736 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-22 09:50:19.736 +12:00 [INF] ********************************************************************************
+2024-08-22 09:50:19.736 +12:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-08-22 09:50:19.736 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-22 09:50:19.736 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-22 09:50:19.736 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-22 09:50:19.736 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-22 09:50:19.736 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-22 09:50:19.737 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-22 09:50:19.737 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-22 09:50:19.737 +12:00 [INF] ********************************************************************************
+2024-08-22 09:50:19.737 +12:00 [INF] ********************************************************************************
+2024-08-22 09:50:23.423 +12:00 [INF] The number of languages:  2
+2024-08-22 09:50:35.816 +12:00 [INF] Check the number of existing languages: 1
+2024-08-22 09:50:38.342 +12:00 [INF] Check the number of existing languages: 0
