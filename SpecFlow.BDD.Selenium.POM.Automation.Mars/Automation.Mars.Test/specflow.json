@@ -1,0 +1,12 @@
+{
+  "$schema": "https://specflow.org/specflow-config.json",
+  "stepAssemblies": [
+    {
+      "assembly": "Automation.Mars.POM"
+    },
+    {
+      "assembly": "Automation.Mars.Core"
+    }
+  ]
+
+}
