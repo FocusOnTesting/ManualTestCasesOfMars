@@ -32,7 +32,6 @@
 
   <ItemGroup>
     <Folder Include="DataSet\" />
-    <Folder Include="TestCases\" />
     <Folder Include="Results\" />
   </ItemGroup>
 

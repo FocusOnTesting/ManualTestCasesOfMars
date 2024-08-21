@@ -1,0 +1,17 @@
+2024-08-22 09:46:31.872 +12:00 [DBG] ********************************************************************************
+2024-08-22 09:46:31.878 +12:00 [INF] ********************************************************************************
+2024-08-22 09:46:31.878 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-22 09:46:31.878 +12:00 [INF] ********************************************************************************
+2024-08-22 09:46:31.878 +12:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-08-22 09:46:31.879 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-22 09:46:31.879 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-22 09:46:31.879 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-22 09:46:31.879 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-22 09:46:31.879 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-22 09:46:31.879 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-22 09:46:31.879 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-22 09:46:31.879 +12:00 [INF] ********************************************************************************
+2024-08-22 09:46:31.879 +12:00 [INF] ********************************************************************************
+2024-08-22 09:46:36.370 +12:00 [INF] The number of languages:  2
+2024-08-22 09:46:58.148 +12:00 [ERR] Element not clickable. Timed out after 10 seconds
+2024-08-22 09:46:58.165 +12:00 [ERR] Error while hovering mouse on the element element: Element is not clickable. Timed out after 10 seconds

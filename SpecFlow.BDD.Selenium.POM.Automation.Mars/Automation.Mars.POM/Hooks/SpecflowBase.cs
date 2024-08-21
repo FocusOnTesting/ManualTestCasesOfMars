@@ -57,7 +57,7 @@ namespace Automation.Mars.POM.Hooks
             IExtentFeatureReport extentFeatureReport = SpecflowRunner._iserviceProvider.GetRequiredService<IExtentFeatureReport>();
             extentFeatureReport.FlushExtent();
             // quit browser after a scenario
-            _idriver.CloseBrowser();
+            //_idriver.CloseBrowser();
         }
     }
 }
