@@ -126,6 +126,14 @@ namespace Automation.Mars.Core.DriverContext
             js.ExecuteScript(script);
         }
 
+        public string WebPageReadyState(string script)
+        {
+            string result = null;
+            IJavaScriptExecutor js = (IJavaScriptExecutor)GetWebDriver();
+            result = js.ExecuteScript(script).ToString();
+            return result;
+        }
+
         public void ScrollWithPixel()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)GetWebDriver();

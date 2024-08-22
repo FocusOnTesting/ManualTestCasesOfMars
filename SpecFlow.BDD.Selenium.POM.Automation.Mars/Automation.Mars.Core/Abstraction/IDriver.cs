@@ -21,6 +21,8 @@ namespace Automation.Mars.Core.Abstraction
         void SwitchToFrameWithName(string frameName);
         void Maximize();
         void ExecuteJavaScript(string script);
+
+        public string WebPageReadyState(string script);
         void ScrollWithPixel();
         void ScrollByheight();
         void ScrollIntoView(IAtWebElement iatWebElement);
