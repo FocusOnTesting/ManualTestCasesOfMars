@@ -1,0 +1,76 @@
+2024-08-23 15:53:15.518 +12:00 [DBG] ********************************************************************************
+2024-08-23 15:53:15.523 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-23 15:53:15.524 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-23 15:53:15.524 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-23 15:53:15.524 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:15.524 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:19.967 +12:00 [INF] The language page load status is: complete
+2024-08-23 15:53:19.976 +12:00 [INF] Check the number of existing languages: 4
+2024-08-23 15:53:20.005 +12:00 [INF] The name of first language is: English
+2024-08-23 15:53:20.645 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-23 15:53:20.670 +12:00 [INF] Check the number of existing languages: 3
+2024-08-23 15:53:20.691 +12:00 [INF] The name of first language is: Chinese
+2024-08-23 15:53:21.021 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-23 15:53:21.047 +12:00 [INF] Check the number of existing languages: 2
+2024-08-23 15:53:21.068 +12:00 [INF] The name of first language is: French
+2024-08-23 15:53:21.395 +12:00 [INF] The deletion popup message is : French has been deleted from your languages
+2024-08-23 15:53:21.420 +12:00 [INF] Check the number of existing languages: 1
+2024-08-23 15:53:21.439 +12:00 [INF] The name of first language is: Japanese
+2024-08-23 15:53:21.779 +12:00 [INF] The deletion popup message is : Japanese has been deleted from your languages
+2024-08-23 15:53:21.785 +12:00 [INF] Check the number of existing languages: 0
+2024-08-23 15:53:22.780 +12:00 [INF] The deletion popup message is : English has been added to your languages
+2024-08-23 15:53:30.325 +12:00 [INF] The language page load status is: complete
+2024-08-23 15:53:30.332 +12:00 [INF] Check the number of existing languages: 1
+2024-08-23 15:53:30.359 +12:00 [INF] The name of first language is: English
+2024-08-23 15:53:30.998 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-23 15:53:31.003 +12:00 [INF] Check the number of existing languages: 0
+2024-08-23 15:53:31.933 +12:00 [INF] The deletion popup message is : English has been added to your languages
+2024-08-23 15:53:32.849 +12:00 [INF] The deletion popup message is : Chinese has been added to your languages
+2024-08-23 15:53:33.752 +12:00 [INF] The deletion popup message is : French has been added to your languages
+2024-08-23 15:53:34.071 +12:00 [INF] The deletion popup message is : French has been added to your languages
+2024-08-23 15:53:45.023 +12:00 [DBG] ********************************************************************************
+2024-08-23 15:53:45.029 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-23 15:53:45.029 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-23 15:53:45.029 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-23 15:53:45.029 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:45.029 +12:00 [INF] ********************************************************************************
+2024-08-23 15:53:49.326 +12:00 [INF] The language page load status is: complete
+2024-08-23 15:53:49.335 +12:00 [INF] Check the number of existing languages: 4
+2024-08-23 15:53:49.363 +12:00 [INF] The name of first language is: English
+2024-08-23 15:53:50.000 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-23 15:53:50.022 +12:00 [INF] Check the number of existing languages: 3
+2024-08-23 15:53:50.044 +12:00 [INF] The name of first language is: Chinese
+2024-08-23 15:53:50.377 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-23 15:53:50.404 +12:00 [INF] Check the number of existing languages: 2
+2024-08-23 15:53:50.423 +12:00 [INF] The name of first language is: French
+2024-08-23 15:53:50.746 +12:00 [INF] The deletion popup message is : French has been deleted from your languages
+2024-08-23 15:53:50.772 +12:00 [INF] Check the number of existing languages: 1
+2024-08-23 15:53:50.791 +12:00 [INF] The name of first language is: Japanese
+2024-08-23 15:53:51.121 +12:00 [INF] The deletion popup message is : Japanese has been deleted from your languages
+2024-08-23 15:53:51.127 +12:00 [INF] Check the number of existing languages: 0
+2024-08-23 15:53:52.064 +12:00 [INF] The deletion popup message is : English has been added to your languages
+2024-08-23 15:53:59.322 +12:00 [INF] The language page load status is: complete
+2024-08-23 15:53:59.332 +12:00 [INF] Check the number of existing languages: 1
+2024-08-23 15:53:59.360 +12:00 [INF] The name of first language is: English
+2024-08-23 15:54:00.014 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-23 15:54:00.023 +12:00 [INF] Check the number of existing languages: 0
+2024-08-23 15:54:00.996 +12:00 [INF] The deletion popup message is : English has been added to your languages
+2024-08-23 15:54:01.300 +12:00 [INF] The deletion popup message is : English has been added to your languages
+2024-08-23 15:54:01.745 +12:00 [INF] The deletion popup message is : Chinese has been added to your languages
+2024-08-23 15:54:02.105 +12:00 [INF] The deletion popup message is : French has been added to your languages
