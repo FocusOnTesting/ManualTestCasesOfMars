@@ -43,13 +43,13 @@ namespace Automation.Mars.POM.Steps
         [When(@"Input a language '([^']*)'")]
         public void WhenInputALanguage(string language)
         {
-            _iprofilePageLanguages.InputLanguageName(language);
+            _iprofilePageLanguages.InputAddLanguageName(language);
         }
 
         [When(@"Choose a language level '([^']*)'")]
         public void WhenChooseALanguageLevel(string level)
         {
-            _iprofilePageLanguages.SelectLanguageLevel(level);
+            _iprofilePageLanguages.SelectAddLanguageLevel(level);
         }
 
         [When(@"Click Add button")]
@@ -65,8 +65,8 @@ namespace Automation.Mars.POM.Steps
             foreach (TableRow row in table.Rows)
             {
                 _iprofilePageLanguages.ClickAddNewButton();
-                _iprofilePageLanguages.InputLanguageName(row[0]);
-                _iprofilePageLanguages.SelectLanguageLevel(row[1]);
+                _iprofilePageLanguages.InputAddLanguageName(row[0]);
+                _iprofilePageLanguages.SelectAddLanguageLevel(row[1]);
                 _iprofilePageLanguages.ClickAddButton();
             }
         }
@@ -81,8 +81,23 @@ namespace Automation.Mars.POM.Steps
         [Then(@"Clean up test languages")]
         public void ThenCleanUpTestLanguages(Table table)
         {
+        }
+
+        [When(@"I Update the language '([^']*)' and Level '([^']*)'")]
+        public void WhenIUpdateTheLanguageAndLevel(string language, string level)
+        {
+            _iprofilePageLanguages.ClickPenIcon();
+            _iprofilePageLanguages.InputUpdateLanguageName(language);
+            _iprofilePageLanguages.SelectUpdateLanguageLevel(level);
+            _iprofilePageLanguages.ClickUpdateButton();
+        }
+
+        [Then(@"The record is updated to new language '([^']*)' and level '([^']*)'")]
+        public void ThenTheRecordIsUpdatedToNewLanguageAndLevel(string language, string level)
+        {
 
         }
+
 
     }
 }

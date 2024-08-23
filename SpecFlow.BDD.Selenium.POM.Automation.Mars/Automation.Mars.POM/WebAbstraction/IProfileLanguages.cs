@@ -10,9 +10,13 @@ namespace Automation.Mars.POM.WebAbstraction
     {
         public string GetGreeting();
         public void ClickAddNewButton();
-        public void InputLanguageName(string name);
-        public void SelectLanguageLevel(string level);
+        public void InputAddLanguageName(string name);
+        public void SelectAddLanguageLevel(string level);
         public void ClickAddButton();
+        public void ClickPenIcon();
+        public void InputUpdateLanguageName(string name);
+        public void SelectUpdateLanguageLevel(string level);
+        public void ClickUpdateButton();
         public void CleanUpLanguages();
         public int CountOfLanguages();
     }

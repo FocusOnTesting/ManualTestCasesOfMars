@@ -25,24 +25,35 @@ namespace Automation.Mars.POM.Pages
         IAtWebElement LanguageTab => _idriver.FindElement(byLanguageTab);
         IAtBy byAddNew => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div");
         IAtWebElement AddNew => _idriver.FindElement(byAddNew);
-        IAtBy byLanguageNameText => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input");
-        IAtWebElement LanguageNameText => _idriver.FindElement(byLanguageNameText);
-        IAtBy byLanguageLevelSelection => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select");
-        IAtWebElement LanguageLevelSelection => _idriver.FindElement(byLanguageLevelSelection);
+        IAtBy byAddLanguageName => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input");
+        IAtWebElement AddLanguageName => _idriver.FindElement(byAddLanguageName);
+        IAtBy byAddLanguageLevel => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select");
+        IAtWebElement AddLanguageLevel => _idriver.FindElement(byAddLanguageLevel);
         IAtBy byAddButton => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]");
         IAtWebElement AddButton => _idriver.FindElement(byAddButton);
-        IAtBy byCancelButton => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[2]");
-        IAtWebElement CancelButton => _idriver.FindElement(byCancelButton);
+        IAtBy byCancelAddButton => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[2]");
+        IAtWebElement CancelAddButton => _idriver.FindElement(byCancelAddButton);
         IAtBy byLanguageItems => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody");
         IAtWebElement LanguageItems => _idriver.FindElement(byLanguageItems);
         IAtBy byFirstLanguageName => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]");
         IAtWebElement FirstLanguageName => _idriver.FindElement(byFirstLanguageName);
+        IAtBy byLastLanguagePenIcon => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[3]/span[1]/i");
+        IAtWebElement LastLanguagePenIcon => _idriver.FindElement(byLastLanguagePenIcon);
+        IAtBy byUpdateLanguageName => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td/div/div[1]/input");
+        IAtWebElement UpdateLanguageName => _idriver.FindElement(byUpdateLanguageName);
+        IAtBy byUpdateLanguageLevel => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td/div/div[2]/select");
+        IAtWebElement UpdateLanguageLevel => _idriver.FindElement(byUpdateLanguageLevel);
+        IAtBy byUpdateButton => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td/div/span/input[1]");
+        IAtWebElement UpdateButton => _idriver.FindElement(byUpdateButton);
+        IAtBy byCancelUpdateButton => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td/div/span/input[2]");
+        IAtWebElement CancelUpdateButton => _idriver.FindElement(byCancelUpdateButton);
         IAtBy byFirstLanguageRemoveIcon => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i");
         IAtWebElement FirstLanguageRemoveIcon => _idriver.FindElement(byFirstLanguageRemoveIcon);
-        IAtBy byDelPopUpMsg => GetBy(LocatorType.XPath, "//div[contains(text(),'has been deleted from your languages')]");
-        IAtWebElement DelPopUpMsg => _idriver.FindElement(byDelPopUpMsg);
+        IAtBy byPopUpMsg => GetBy(LocatorType.XPath, "//div[@class=\"ns-box-inner\" and contains(text(), \"your language\")]");
+        IAtWebElement PopUpMsg => _idriver.FindElement(byPopUpMsg);
         IAtBy byClosePopUp => GetBy(LocatorType.XPath, "//body/div[1]/a[1]");
-        IAtWebElement ClosePopUp => _idriver.FindElement(byDelPopUpMsg);
+        IAtWebElement ClosePopUp => _idriver.FindElement(byClosePopUp);
+
 
 
         public ProfileLanguages(IObjectContainer iobjectContainer)
@@ -63,19 +74,44 @@ namespace Automation.Mars.POM.Pages
             AddNew.Click();
         }
 
-        public void InputLanguageName(string name)
+        public void InputAddLanguageName(string name)
         {
-            LanguageNameText.SendKeys(name);
+            AddLanguageName.SendKeys(name);
         }
 
-        public void SelectLanguageLevel(string level)
+        public void SelectAddLanguageLevel(string level)
         {
-            LanguageLevelSelection.SendKeys(level);
+            AddLanguageLevel.SendKeys(level);
         }
 
         public void ClickAddButton()
         {
             AddButton.Click();
+
+            Log.Information("The deletion popup message is : " + PopUpMsg.GetText());
+
+            ClosePopUp.Click();
+        }
+
+        public void InputUpdateLanguageName(string name)
+        {
+            UpdateLanguageName.ClearText();
+            UpdateLanguageName.SendKeys(name);
+        }
+
+        public void SelectUpdateLanguageLevel(string level)
+        {
+            UpdateLanguageLevel.SendKeys(level);
+        }
+
+        public void ClickPenIcon()
+        {
+            LastLanguagePenIcon.Click();
+        }
+
+        public void ClickUpdateButton()
+        {
+            UpdateButton.Click();
         }
 
         public void CleanUpLanguages()
@@ -99,6 +135,7 @@ namespace Automation.Mars.POM.Pages
             while(count > 0)
             {
                 DeleteFirstLanguage();
+
                 count--;
                 Log.Information("Check the number of existing languages: " + count);
             }
@@ -117,12 +154,9 @@ namespace Automation.Mars.POM.Pages
             FirstLanguageRemoveIcon.Click();
 
             String delXpath = "//div[contains(text(),'" + firstItemName + " has been deleted from your languages')]";
-            IAtBy byDelPopUpMsg = GetBy(LocatorType.XPath, delXpath);
-            IAtWebElement DelPopUpMsg = _idriver.FindElement(byDelPopUpMsg);
-            bool isDisplayed = DelPopUpMsg.IsDisplayed();
+            ClosePopUp.Click();
 
-            Log.Information("Check if deletion popup message is displayed: " + isDisplayed);
-            Log.Information("The deletion popup message is : " + DelPopUpMsg.GetText());
+            Log.Information("The deletion popup message is : " + PopUpMsg.GetText());
 
             if (CountOfLanguages() > 0)
             {
