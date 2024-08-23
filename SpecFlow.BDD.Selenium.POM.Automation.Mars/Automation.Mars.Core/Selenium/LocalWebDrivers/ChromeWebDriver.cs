@@ -41,6 +41,7 @@ namespace Automation.Mars.Core.Selenium.LocalWebDrivers
             options.AddArgument("dns-prefetch-disable");
             options.AddArgument("disable-browser-side-navigation");
             options.AddArgument("disable-gpu");
+            options.AddArgument("disable-features=SidePanelPinning");
             options.AddArgument("always-authorize-plugins");
             options.AddArgument("load-extension=src/main/resources/chrome_load_stopper");
             options.AddUserProfilePreference("download.default_directory", _iglobalProperties.dataSetLocation);
