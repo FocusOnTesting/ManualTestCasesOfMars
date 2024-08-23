@@ -1,5 +1,5 @@
 {
-  "BrowserType": "chrome", // [chrome/firefox/ie/safari]Default Browser Chrome 
+  "BrowserType": "chrome", // [chrome/firefox/edge/safari]Default Browser Chrome 
   "BrowserVersion": "", // Blank
   "GridHubUrl": "https://localhost:4444/wd/hub", // default is local. Grid url format --https://localhost:4444/
 
