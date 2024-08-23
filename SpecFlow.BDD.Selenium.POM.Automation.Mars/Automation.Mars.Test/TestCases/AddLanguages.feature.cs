@@ -20,22 +20,22 @@ namespace Automation.Mars.Test.TestCases
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("AddLanguage")]
-    public partial class AddLanguageFeature
+    [NUnit.Framework.DescriptionAttribute("AddLanguages")]
+    public partial class AddLanguagesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "AddLanguage.feature"
+#line 1 "AddLanguages.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestCases", "AddLanguage", "As a Mars user, \r\nI want to add Languages which I speak, \r\nso that traders can kn" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestCases", "AddLanguages", "As a Mars user, \r\nI want to add Languages which I speak, \r\nSo that traders can kn" +
                     "ow my Languages.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -91,11 +91,13 @@ namespace Automation.Mars.Test.TestCases
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("TC_001 Add single language with valid name and level")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
+        [NUnit.Framework.CategoryAttribute("Smoke")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
         public void TC_001AddSingleLanguageWithValidNameAndLevel()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "Smoke",
+                    "Regression"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC_001 Add single language with valid name and level", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 13
@@ -118,7 +120,7 @@ this.FeatureBackground();
                             "English",
                             "Fluent"});
 #line 14
- testRunner.When("Add Languages", ((string)(null)), table1, "When ");
+ testRunner.When("I add languages", ((string)(null)), table1, "When ");
 #line hidden
 #line 17
  testRunner.Then("A successful message pop is shown on the right top", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -129,14 +131,14 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("TC_002 Add four languages with valid name and level")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
         public void TC_002AddFourLanguagesWithValidNameAndLevel()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "Regression"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC_002 Add four languages with valid name and level", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 24
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -154,20 +156,20 @@ this.FeatureBackground();
                             "Level"});
                 table2.AddRow(new string[] {
                             "English",
-                            "Fluent"});
+                            "Basic"});
                 table2.AddRow(new string[] {
-                            "Chinese",
-                            "Fluent"});
+                            "Janpanese",
+                            "Conversational"});
                 table2.AddRow(new string[] {
                             "French",
                             "Fluent"});
                 table2.AddRow(new string[] {
-                            "Japanese",
-                            "Fluent"});
-#line 25
- testRunner.When("Add Languages", ((string)(null)), table2, "When ");
+                            "Chinese",
+                            "Native/Bilingual"});
+#line 23
+ testRunner.When("I add languages", ((string)(null)), table2, "When ");
 #line hidden
-#line 32
+#line 30
  testRunner.Then("A successful message pop is shown on the right top", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
