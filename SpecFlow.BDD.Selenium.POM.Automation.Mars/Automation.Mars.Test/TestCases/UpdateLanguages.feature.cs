@@ -35,7 +35,7 @@ namespace Automation.Mars.Test.TestCases
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestCases", "UpdateLanguages", "As a Mars user, \r\nI want to update Languages which I speak, \r\nso that traders can" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestCases", "UpdateLanguages", "As a Mars user, \r\nI want to update Languages which I speak, \r\nSo that traders can" +
                     " know new Languages.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -91,12 +91,14 @@ namespace Automation.Mars.Test.TestCases
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("TC_012 Update language with valid name and level")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
+        [NUnit.Framework.CategoryAttribute("Smoke")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
         [NUnit.Framework.TestCaseAttribute("French", "Basic", null)]
         public void TC_012UpdateLanguageWithValidNameAndLevel(string language, string level, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "tag1"};
+                    "Smoke",
+                    "Regression"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -126,10 +128,10 @@ this.FeatureBackground();
                             "English",
                             "Fluent"});
 #line 14
- testRunner.When("Add Languages", ((string)(null)), table3, "When ");
+ testRunner.When("I add languages", ((string)(null)), table3, "When ");
 #line hidden
 #line 17
- testRunner.And(string.Format("I Update the language \'{0}\' and Level \'{1}\'", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I update the language \'{0}\' and level \'{1}\'", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
  testRunner.Then(string.Format("The record is updated to new language \'{0}\' and level \'{1}\'", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

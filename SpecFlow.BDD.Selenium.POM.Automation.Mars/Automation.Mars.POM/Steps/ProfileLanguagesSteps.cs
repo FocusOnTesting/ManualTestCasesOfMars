@@ -58,8 +58,8 @@ namespace Automation.Mars.POM.Steps
             _iprofilePageLanguages.ClickAddButton();
         }
 
-        [When(@"Add Languages")]
-        public void WhenAddLanguages(Table table)
+        [When(@"I add languages")]
+        public void WhenIAddLanguages(Table table)
         {
             IDictionary<string, string> dictionary = new Dictionary<string, string>();
             foreach (TableRow row in table.Rows)
@@ -83,7 +83,7 @@ namespace Automation.Mars.POM.Steps
         {
         }
 
-        [When(@"I Update the language '([^']*)' and Level '([^']*)'")]
+        [When(@"I update the language '([^']*)' and level '([^']*)'")]
         public void WhenIUpdateTheLanguageAndLevel(string language, string level)
         {
             _iprofilePageLanguages.ClickPenIcon();
