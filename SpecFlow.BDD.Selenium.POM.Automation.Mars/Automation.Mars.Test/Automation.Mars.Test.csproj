@@ -32,7 +32,6 @@
 
   <ItemGroup>
     <Folder Include="DataSet\" />
-    <Folder Include="TestCases\" />
     <Folder Include="Results\" />
   </ItemGroup>
 
@@ -43,6 +42,12 @@
 
   <ItemGroup>
     <None Update="Resources\applicationConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\frameworkSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="specflow.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
