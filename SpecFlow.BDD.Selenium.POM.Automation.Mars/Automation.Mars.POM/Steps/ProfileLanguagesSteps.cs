@@ -10,6 +10,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using Automation.Mars.POM.Utilities;
 
 namespace Automation.Mars.POM.Steps
 {
@@ -65,17 +66,19 @@ namespace Automation.Mars.POM.Steps
             foreach (TableRow row in table.Rows)
             {
                 _iprofilePageLanguages.ClickAddNewButton();
-                _iprofilePageLanguages.InputAddLanguageName(row[0]);
-                _iprofilePageLanguages.SelectAddLanguageLevel(row[1]);
+                _iprofilePageLanguages.InputAddLanguageName(row["Language"]);
+                _iprofilePageLanguages.SelectAddLanguageLevel(row["Level"]);
                 _iprofilePageLanguages.ClickAddButton();
             }
         }
 
 
-        [Then(@"A successful message pop is shown on the right top")]
-        public void ThenASuccessfulMessagePopIsShownOnTheRightTop()
+        [Then(@"Languages should be added successfully")]
+        public void LanguagesShouldBeAddedSuccessfully(Table expectedTable)
         {
-
+            Table actualTable;
+            actualTable = _iprofilePageLanguages.GetLanguagesTable();
+            Assert.IsTrue(TableComparer.AreTablesEqual(actualTable, expectedTable));
         }
 
         [Then(@"Clean up test languages")]

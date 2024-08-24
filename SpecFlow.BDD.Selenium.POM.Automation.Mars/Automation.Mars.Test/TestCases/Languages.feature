@@ -14,7 +14,9 @@ Scenario: TC_001 Add single language with valid name and level
 	When I add languages
 		| Language  | Level  |
 		| English   | Fluent |
-	Then A successful message pop is shown on the right top
+	Then Languages should be added successfully
+		| Language  | Level  |
+		| English   | Fluent |
 	#And Clean up test languages
 
 
@@ -26,8 +28,12 @@ Scenario: TC_002 Add four languages with valid name and level
 		| Janpanese	| Conversational   |
 		| French    | Fluent           |
 		| Chinese   | Native/Bilingual |
-
-	Then A successful message pop is shown on the right top
+	Then Languages should be added successfully
+		| Language  | Level            |
+		| English   | Basic            |
+		| Janpanese	| Conversational   |
+		| French    | Fluent           |
+		| Chinese   | Native/Bilingual |
 	#And Clean up test languages
 
 @Smoke @Regression

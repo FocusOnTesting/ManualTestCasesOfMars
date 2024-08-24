@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace Automation.Mars.POM.WebAbstraction
 {
@@ -20,5 +21,6 @@ namespace Automation.Mars.POM.WebAbstraction
         public void ClickUpdateButton();
         public void CleanUpLanguages();
         public int CountOfLanguages();
+        public Table GetLanguagesTable();
     }
 }

@@ -17,7 +17,7 @@ namespace Automation.Mars.Core.Abstraction
         string GetAttribute(string attributeName);
         void MouseHover();
         bool IsDisplayed();
-        void DoubleClick();
+        void RightClick();
         void ClickWithJs();
         IWebElement GetElement();
         int NumberOfElement { get; }

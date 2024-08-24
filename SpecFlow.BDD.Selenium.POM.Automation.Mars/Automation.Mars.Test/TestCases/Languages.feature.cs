@@ -122,8 +122,14 @@ this.FeatureBackground();
 #line 14
  testRunner.When("I add languages", ((string)(null)), table1, "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Language",
+                            "Level"});
+                table2.AddRow(new string[] {
+                            "English",
+                            "Fluent"});
 #line 17
- testRunner.Then("A successful message pop is shown on the right top", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Languages should be added successfully", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -138,7 +144,7 @@ this.FeatureBackground();
                     "Regression"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC_002 Add four languages with valid name and level", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 22
+#line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -151,26 +157,41 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Language",
                             "Level"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "English",
                             "Basic"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Janpanese",
                             "Conversational"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "French",
                             "Fluent"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Chinese",
                             "Native/Bilingual"});
-#line 23
- testRunner.When("I add languages", ((string)(null)), table2, "When ");
+#line 25
+ testRunner.When("I add languages", ((string)(null)), table3, "When ");
 #line hidden
-#line 30
- testRunner.Then("A successful message pop is shown on the right top", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Language",
+                            "Level"});
+                table4.AddRow(new string[] {
+                            "English",
+                            "Basic"});
+                table4.AddRow(new string[] {
+                            "Janpanese",
+                            "Conversational"});
+                table4.AddRow(new string[] {
+                            "French",
+                            "Fluent"});
+                table4.AddRow(new string[] {
+                            "Chinese",
+                            "Native/Bilingual"});
+#line 31
+ testRunner.Then("Languages should be added successfully", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -195,7 +216,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("Language", language);
             argumentsOfScenario.Add("Level", level);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TC_012 Update language with valid name and level", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 34
+#line 40
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -208,19 +229,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Language",
                             "Level"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "English",
                             "Fluent"});
-#line 35
- testRunner.When("I add languages", ((string)(null)), table3, "When ");
+#line 41
+ testRunner.When("I add languages", ((string)(null)), table5, "When ");
 #line hidden
-#line 38
+#line 44
  testRunner.And(string.Format("I update the language \'{0}\' and level \'{1}\'", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 45
  testRunner.Then(string.Format("The record is updated to new language \'{0}\' and level \'{1}\'", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

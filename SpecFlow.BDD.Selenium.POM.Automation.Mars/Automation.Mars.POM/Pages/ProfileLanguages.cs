@@ -3,12 +3,14 @@ using Automation.Mars.Core.Base;
 using Automation.Mars.Core.DriverContext;
 using Automation.Mars.POM.WebAbstraction;
 using BoDi;
+using Microsoft.VisualBasic;
 using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace Automation.Mars.POM.Pages
 {
@@ -127,8 +129,32 @@ namespace Automation.Mars.POM.Pages
 
         public int CountOfLanguages()
         {
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
             return LanguageItems.NumberOfElement;
         }
+
+        public Table GetLanguagesTable()
+        {
+            Table table = new Table("Language", "Level");
+            int row = CountOfLanguages();
+            int column = 2;
+            IAtBy byLanguageCell;
+            IAtWebElement LanguageCell;
+            for (int i = 1; i <= row; i++)
+            {
+                string[] cells = new string[column];
+                for (int j = 1; j <= column; j++)
+                {
+                    byLanguageCell = GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[" + j + "]");
+                    LanguageCell = _idriver.FindElement(byLanguageCell);
+                    cells[j-1] = LanguageCell.GetText();
+                }
+                table.AddRow(cells);
+            }
+
+            return table;
+        }
+
         public void ClickAddNewButton()
         {
             AddNew.Click();
@@ -147,10 +173,9 @@ namespace Automation.Mars.POM.Pages
         public void ClickAddButton()
         {
             AddButton.Click();
-
-            Log.Information("The deletion popup message is : " + PopUpMsg.GetText());
-
+            Log.Information("The popup message is : " + PopUpMsg.GetText());
             ClosePopUp.Click();
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
         }
 
         public void InputUpdateLanguageName(string name)
