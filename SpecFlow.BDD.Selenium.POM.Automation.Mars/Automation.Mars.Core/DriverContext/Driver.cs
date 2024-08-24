@@ -10,6 +10,7 @@ using Automation.Mars.Core.Runner;
 using Microsoft.Extensions.DependencyInjection;
 using BoDi;
 using Automation.Mars.Core.Selenium.LocalWebDrivers;
+using OpenQA.Selenium.Support.UI;
 
 namespace Automation.Mars.Core.DriverContext
 {
@@ -17,6 +18,7 @@ namespace Automation.Mars.Core.DriverContext
     {
         IChromeWebDriver _ichromeWebDriver;
         IFirefoxWebDriver _ifirefoxWebDriver;
+        IEdgeWebDriver _iedgeWebDriver;
         IWebDriver _iwebDriver;
         IObjectContainer _iobjectContainer;
         //public Driver(IChromeWebDriver ichromeWebDriver,IFirefoxWebDriver ifirefoxWebDriver,IObjectContainer iobjectContainer)
@@ -26,6 +28,7 @@ namespace Automation.Mars.Core.DriverContext
             //_ifirefoxWebDriver = ifirefoxWebDriver;
             _ichromeWebDriver = iobjectContainer.Resolve<IChromeWebDriver>();
             _ifirefoxWebDriver = iobjectContainer.Resolve<IFirefoxWebDriver>();
+            _iedgeWebDriver = iobjectContainer.Resolve<IEdgeWebDriver>();
             _iobjectContainer = iobjectContainer;
         }
 
@@ -48,6 +51,9 @@ namespace Automation.Mars.Core.DriverContext
                     break;
                 case "firefox":
                     _iwebDriver = _ifirefoxWebDriver.GetFirefoxDriver();
+                    break;
+                case "edge":
+                    _iwebDriver = _iedgeWebDriver.GetEdgeWebDriver();
                     break;
 
                 default:
@@ -109,7 +115,6 @@ namespace Automation.Mars.Core.DriverContext
             }
         }
 
-
         public void SwitchToFrameWithName(string frameName)
         {
             GetWebDriver().SwitchTo().Frame(frameName);
@@ -126,12 +131,23 @@ namespace Automation.Mars.Core.DriverContext
             js.ExecuteScript(script);
         }
 
-        public string WebPageReadyState(string script)
+        public void WaitForPageLoadAndTextNode(IWebDriver driver, string xpath, int timeoutInSeconds = 10)
         {
-            string result = null;
-            IJavaScriptExecutor js = (IJavaScriptExecutor)GetWebDriver();
-            result = js.ExecuteScript(script).ToString();
-            return result;
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
+
+            wait.Until(d => {
+                bool isPageLoaded = ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete");
+                if (!isPageLoaded) return false;
+
+                IJavaScriptExecutor js = (IJavaScriptExecutor)d;
+                string script = @"
+                    var result = document.evaluate(arguments[0], document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+                    var node = result.singleNodeValue;
+                    return node && node.textContent ? node.textContent.trim() : null;
+                ";
+                string content = (string)js.ExecuteScript(script, xpath);
+                return !string.IsNullOrWhiteSpace(content);
+            });
         }
 
         public void ScrollWithPixel()

@@ -35,6 +35,7 @@ namespace Automation.Mars.Core.DIContainer
         {
             iobjectContainer.RegisterTypeAs<ChromeWebDriver, IChromeWebDriver>();
             iobjectContainer.RegisterTypeAs<FirefoxWebDriver, IFirefoxWebDriver>();
+            iobjectContainer.RegisterTypeAs<EdgeWebDriver, IEdgeWebDriver>();
             iobjectContainer.RegisterTypeAs<Driver, IDriver>();
             iobjectContainer.RegisterTypeAs<AtBy, IAtBy>();
             iobjectContainer.RegisterTypeAs<AtWebElement, IAtWebElement>();
