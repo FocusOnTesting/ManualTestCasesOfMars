@@ -39,8 +39,8 @@ namespace Automation.Mars.Core.WebElements
             }
             catch (Exception e)
             {
-                _ilogging.Error("Element not clickable. " + e.Message);
-                throw new AutomationException("Element is not clickable. " + e.Message);
+                _ilogging.Error("Error while getting element: " + e.Message);
+                throw new AutomationException("Error while getting element: " + e.Message);
             }
         }
         public void Click()
@@ -56,8 +56,8 @@ namespace Automation.Mars.Core.WebElements
                 catch (StaleElementReferenceException st) { }
                 catch (Exception e)
                 {
-                    _ilogging.Error("Error while clicking element. " + e.Message);
-                    throw new AutomationException("Error while clicking element. " + e.Message);
+                    _ilogging.Error("Error while clicking element: " + e.Message);
+                    throw new AutomationException("Error while clicking element: " + e.Message);
                 }
             }
 
@@ -76,8 +76,8 @@ namespace Automation.Mars.Core.WebElements
                 catch (StaleElementReferenceException ste) { }
                 catch (Exception e)
                 {
-                    _ilogging.Error("Error while adding text. " + e.Message);
-                    throw new AutomationException("Error while adding text. " + e.Message);
+                    _ilogging.Error("Error while adding text: " + e.Message);
+                    throw new AutomationException("Error while adding text: " + e.Message);
                 }
             }
         }
@@ -89,15 +89,16 @@ namespace Automation.Mars.Core.WebElements
                 try
                 {
                     IWebElement webElement = GetElement();
-                    webElement.SendKeys(Keys.Control + "a");
-                    webElement.SendKeys(Keys.Delete);
+                    webElement.Clear();
+                    //webElement.SendKeys(Keys.Control + "a");
+                    //webElement.SendKeys(Keys.Delete);
                     break;
                 }
                 catch (StaleElementReferenceException st) { }
                 catch (Exception e)
                 {
                     _ilogging.Error("Error while clicking element: " + e.Message);
-                    throw new AutomationException("Error while clicking element: " + e.Message);
+                    throw new AutomationException("Error while getting element text: " + e.Message);
                 }
             }
         }
@@ -116,8 +117,8 @@ namespace Automation.Mars.Core.WebElements
                 catch (StaleElementReferenceException st) { }
                 catch (Exception e)
                 {
-                    _ilogging.Error("Error while clicking element: " + e.Message);
-                    throw new AutomationException("Error while clicking element: " + e.Message);
+                    _ilogging.Error("Error while getting element text: " + e.Message);
+                    throw new AutomationException("Error while getting element text: " + e.Message);
                 }
             }
             return text;
@@ -137,8 +138,8 @@ namespace Automation.Mars.Core.WebElements
                 catch (StaleElementReferenceException st) { }
                 catch (Exception e)
                 {
-                    _ilogging.Error("Error while clicking element: " + e.Message);
-                    throw new AutomationException("Error while clicking element: " + e.Message);
+                    _ilogging.Error("Error while getting element attribute: " + e.Message);
+                    throw new AutomationException("Error while getting element attribute: " + e.Message);
                 }
             }
             return text;
@@ -178,8 +179,8 @@ namespace Automation.Mars.Core.WebElements
                 catch (StaleElementReferenceException st) { }
                 catch (Exception e)
                 {
-                    _ilogging.Error("Error while hovering mouse on the element element: " + e.Message);
-                    throw new AutomationException("Error while hovering mouse on the element: " + e.Message);
+                    _ilogging.Error("Error while check the element is displayed: " + e.Message);
+                    throw new AutomationException("Error while check the element is displayed: " + e.Message);
                 }
             }
             return IsDisplayed;
@@ -197,13 +198,13 @@ namespace Automation.Mars.Core.WebElements
                 catch (StaleElementReferenceException st) { }
                 catch (Exception e)
                 {
-                    _ilogging.Error("Error while hovering mouse on the element element: " + e.Message);
-                    throw new AutomationException("Error while hovering mouse on the element: " + e.Message);
+                    _ilogging.Error("Error while check the element is presented: " + e.Message);
+                    throw new AutomationException("Error while check the element is presented: " + e.Message);
                 }
             }
         }
 
-        public void DoubleClick()
+        public void RightClick()
         {
             for (int i = 0; i < 5; i++)
             {
@@ -237,8 +238,8 @@ namespace Automation.Mars.Core.WebElements
                 catch (StaleElementReferenceException st) { }
                 catch (Exception e)
                 {
-                    _ilogging.Error("Error while clicking with javascript " + e.Message);
-                    throw new AutomationException("Error while clicking with javascript. " + e.Message);
+                    _ilogging.Error("Error while clicking with javascript: " + e.Message);
+                    throw new AutomationException("Error while clicking with javascript: " + e.Message);
                 }
             }
         }
