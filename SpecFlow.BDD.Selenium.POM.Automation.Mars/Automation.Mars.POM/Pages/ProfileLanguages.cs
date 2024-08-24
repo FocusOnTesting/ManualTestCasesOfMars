@@ -21,6 +21,8 @@ namespace Automation.Mars.POM.Pages
         IAtWebElement Profile => _idriver.FindElement(byProfile);
         IAtBy byGreeting => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/div[1]/div[2]/div/span");
         IAtWebElement Greeting => _idriver.FindElement(byGreeting);
+        IAtBy byMyName => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]");
+        IAtWebElement MyName => _idriver.FindElement(byMyName);
         IAtBy byLanguageTab => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[1]");
         IAtWebElement LanguageTab => _idriver.FindElement(byLanguageTab);
         IAtBy byAddNew => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div");
@@ -54,7 +56,7 @@ namespace Automation.Mars.POM.Pages
         IAtBy byClosePopUp => GetBy(LocatorType.XPath, "//body/div[1]/a[1]");
         IAtWebElement ClosePopUp => _idriver.FindElement(byClosePopUp);
 
-
+        string textNodeNameXPath = "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/text()";
 
         public ProfileLanguages(IObjectContainer iobjectContainer)
             : base(iobjectContainer)
@@ -65,10 +67,68 @@ namespace Automation.Mars.POM.Pages
 
         public string GetGreeting()
         {
-            Log.Information("This greeting string is: " + Greeting.GetText());
+
+            Log.Information("Unknow page load status. This greeting string is: " + Greeting.GetText());
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+            Log.Information("Page loaded fully. This greeting string is: " + Greeting.GetText());
+
             return Greeting.GetText();
         }
 
+        public string GetMyName()
+        {
+            Log.Information("Unknow page load status. My name is: " + MyName.GetText());
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+            Log.Information("Page loaded fully. My name is: " + MyName.GetText());
+
+            return MyName.GetText();
+        }
+
+        public void CleanUpLanguages()
+        {
+            //How to make sure datas have been loaded fully.
+            //Thread.Sleep(1000);
+            Profile.Click();
+            LanguageTab.Click();
+
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+
+            int count = CountOfLanguages();
+            Log.Information("Check the number of existing languages: " + count);
+            //Log.Information("The count of languages: " + _idriver.FindElementsCount(byLanguageItems));
+            while (count > 0)
+            {
+                DeleteFirstLanguage();
+                count--;
+                Log.Information("Check the number of existing languages: " + count);
+            }
+        }
+
+        public void DeleteFirstLanguage()
+        {
+            string firstItemName = FirstLanguageName.GetText();
+            Log.Information("The name of first language is: " + firstItemName);
+
+            FirstLanguageRemoveIcon.Click();
+
+            String delXpath = "//div[contains(text(),'" + firstItemName + " has been deleted from your languages')]";
+            ClosePopUp.Click();
+
+            Log.Information("The deletion popup message is : " + PopUpMsg.GetText());
+
+            if (CountOfLanguages() > 0)
+            {
+                while (firstItemName != FirstLanguageName.GetText())
+                {
+                    break;
+                }
+            }
+        }
+
+        public int CountOfLanguages()
+        {
+            return LanguageItems.NumberOfElement;
+        }
         public void ClickAddNewButton()
         {
             AddNew.Click();
@@ -113,60 +173,5 @@ namespace Automation.Mars.POM.Pages
         {
             UpdateButton.Click();
         }
-
-        public void CleanUpLanguages()
-        {
-            //How to make sure datas have been loaded fully.
-            //Thread.Sleep(1000);
-            Profile.Click();
-            LanguageTab.Click();
-
-            string pageLoadStatus;
-            do
-            {
-                pageLoadStatus = _idriver.WebPageReadyState("return document.readyState");
-                Log.Information("The language page load status is: " + pageLoadStatus);
-
-            } while (!pageLoadStatus.Equals("complete"));
-
-            int count = CountOfLanguages();
-            Log.Information("Check the number of existing languages: " + count);
-            //Log.Information("The count of languages: " + _idriver.FindElementsCount(byLanguageItems));
-            while(count > 0)
-            {
-                DeleteFirstLanguage();
-
-                count--;
-                Log.Information("Check the number of existing languages: " + count);
-            }
-        }
-
-        public int CountOfLanguages()
-        {
-            return LanguageItems.NumberOfElement;
-        }
-
-        public void DeleteFirstLanguage()
-        {
-            string firstItemName = FirstLanguageName.GetText();
-            Log.Information("The name of first language is: " + firstItemName);
-
-            FirstLanguageRemoveIcon.Click();
-
-            String delXpath = "//div[contains(text(),'" + firstItemName + " has been deleted from your languages')]";
-            ClosePopUp.Click();
-
-            Log.Information("The deletion popup message is : " + PopUpMsg.GetText());
-
-            if (CountOfLanguages() > 0)
-            {
-                while (firstItemName != FirstLanguageName.GetText())
-                {
-                    break;
-                }
-            }
-
-        }
-
     }
 }

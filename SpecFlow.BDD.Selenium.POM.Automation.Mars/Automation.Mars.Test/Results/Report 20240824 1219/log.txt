@@ -1,0 +1,18 @@
+2024-08-24 12:19:05.501 +12:00 [DBG] ********************************************************************************
+2024-08-24 12:19:05.506 +12:00 [INF] ********************************************************************************
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-24 12:19:05.507 +12:00 [INF] ********************************************************************************
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|BROWSER TYPE: edge
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-24 12:19:05.507 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-24 12:19:05.507 +12:00 [INF] ********************************************************************************
+2024-08-24 12:19:05.507 +12:00 [INF] ********************************************************************************
+2024-08-24 12:19:09.350 +12:00 [INF] Unknow page load status. This greeting string is: Hi Jay
+2024-08-24 12:19:09.897 +12:00 [INF] Page loaded fully. This greeting string is: Hi Jay
+2024-08-24 12:19:09.936 +12:00 [INF] Unknow page load status. My name is: Jay P
+2024-08-24 12:19:09.962 +12:00 [INF] Page loaded fully. My name is: Jay P

@@ -27,8 +27,12 @@ namespace Automation.Mars.POM.Test
         public void ThenLoginSuccessfully()
         {
             string greeting = string.Empty;
+            string myName = string.Empty;
             greeting = _iprofilePage_Languages.GetGreeting();
+            myName = _iprofilePage_Languages.GetMyName();
+
             Assert.That(greeting, Is.EqualTo("Hi Jay"));
+            Assert.That(myName, Is.EqualTo("Jay P"));
         }
 
 

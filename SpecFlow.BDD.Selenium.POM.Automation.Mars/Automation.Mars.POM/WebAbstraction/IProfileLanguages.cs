@@ -9,6 +9,7 @@ namespace Automation.Mars.POM.WebAbstraction
     public interface IProfileLanguages
     {
         public string GetGreeting();
+        public string GetMyName();
         public void ClickAddNewButton();
         public void InputAddLanguageName(string name);
         public void SelectAddLanguageLevel(string level);
