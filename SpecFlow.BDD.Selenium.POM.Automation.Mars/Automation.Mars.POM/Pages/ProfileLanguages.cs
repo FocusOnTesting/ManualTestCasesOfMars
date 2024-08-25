@@ -174,8 +174,17 @@ namespace Automation.Mars.POM.Pages
         {
             AddButton.Click();
             Log.Information("The popup message is : " + PopUpMsg.GetText());
-            ClosePopUp.Click();
             _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+        }
+
+        public string GetPopupMessage()
+        {
+            return PopUpMsg.GetText();
+        }
+
+        public void ClosePopupMessage()
+        {
+            ClosePopUp.Click();
         }
 
         public void InputUpdateLanguageName(string name)

@@ -15,8 +15,6 @@ Scenario: TC_001 Add single language with valid name and level
 		| Language  | Level  |
 		| English   | Fluent |
 	Then Languages should be added successfully
-		| Language  | Level  |
-		| English   | Fluent |
 	#And Clean up test languages
 
 
@@ -29,11 +27,15 @@ Scenario: TC_002 Add four languages with valid name and level
 		| French    | Fluent           |
 		| Chinese   | Native/Bilingual |
 	Then Languages should be added successfully
+	#And Clean up test languages
+
+@Regression
+Scenario: TC_003 Add language with duplicate name and valid level
+	When I add languages
 		| Language  | Level            |
 		| English   | Basic            |
-		| Janpanese	| Conversational   |
-		| French    | Fluent           |
-		| Chinese   | Native/Bilingual |
+		| English   | Conversational   |
+	Then Languages should not be added successfully
 	#And Clean up test languages
 
 @Smoke @Regression

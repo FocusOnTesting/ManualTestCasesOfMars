@@ -17,10 +17,12 @@ namespace Automation.Mars.POM.Steps
     [Binding]
     public class ProfileLanguagesSteps
     {
-        IProfileLanguages _iprofilePageLanguages;
-        public ProfileLanguagesSteps(IProfileLanguages iprofilePageLanguages)
+        private readonly IProfileLanguages _iprofilePageLanguages;
+        private readonly ScenarioContext _sc;
+        public ProfileLanguagesSteps(IProfileLanguages iprofilePageLanguages, ScenarioContext sc)
         {
             _iprofilePageLanguages = iprofilePageLanguages;
+            _sc = sc;
         }
 
         [When(@"Clean up languages")]
@@ -62,6 +64,8 @@ namespace Automation.Mars.POM.Steps
         [When(@"I add languages")]
         public void WhenIAddLanguages(Table table)
         {
+            _sc["addLanguageTable"] = table;
+            Serilog.Log.Information("addLanguageTable: " + _sc["addLanguageTable"].GetHashCode());
             IDictionary<string, string> dictionary = new Dictionary<string, string>();
             foreach (TableRow row in table.Rows)
             {
@@ -69,15 +73,16 @@ namespace Automation.Mars.POM.Steps
                 _iprofilePageLanguages.InputAddLanguageName(row["Language"]);
                 _iprofilePageLanguages.SelectAddLanguageLevel(row["Level"]);
                 _iprofilePageLanguages.ClickAddButton();
+                _iprofilePageLanguages.ClosePopupMessage();
             }
         }
 
 
         [Then(@"Languages should be added successfully")]
-        public void LanguagesShouldBeAddedSuccessfully(Table expectedTable)
+        public void LanguagesShouldBeAddedSuccessfully()
         {
-            Table actualTable;
-            actualTable = _iprofilePageLanguages.GetLanguagesTable();
+            Table expectedTable = (Table)_sc["addLanguageTable"];
+            Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
             Assert.IsTrue(TableComparer.AreTablesEqual(actualTable, expectedTable));
         }
 
@@ -101,6 +106,13 @@ namespace Automation.Mars.POM.Steps
 
         }
 
+        [Then(@"Languages should not be added successfully")]
+        public void LanguagesShouldNotBeAddedSuccessfully()
+        {
+            Table expectedTable = (Table)_sc["addLanguageTable"];
+            Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
+            Assert.IsFalse(TableComparer.AreTablesEqual(actualTable, expectedTable));
+        }
 
     }
 }
