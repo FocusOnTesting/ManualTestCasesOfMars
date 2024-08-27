@@ -19,6 +19,7 @@ namespace Automation.Mars.POM.WebAbstraction
         public void InputAddLanguageName(string name);
         public void SelectAddLanguageLevel(string level);
         public void ClickAddButton();
+        public void ClickCancelButton();
         public string GetPopupMessage();
         public void ClosePopupMessage();
         public void InputUpdateLanguageName(string name);

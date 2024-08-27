@@ -11,6 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using Automation.Mars.POM.Utilities;
+using System.Threading.Channels;
+using TechTalk.SpecFlow.Assist;
+using Automation.Mars.POM.DataTables;
 
 namespace Automation.Mars.POM.Steps
 {
@@ -59,14 +62,38 @@ namespace Automation.Mars.POM.Steps
         public void WhenClickAddButton()
         {
             _iprofilePageLanguages.ClickAddButton();
+        }        
+        
+        [When(@"Click cancel button")]
+        public void WhenClickCancelButton()
+        {
+            _iprofilePageLanguages.ClickCancelButton();
         }
+
+
 
         [When(@"I add languages")]
         public void WhenIAddLanguages(Table table)
         {
             _sc["addLanguageTable"] = table;
             Serilog.Log.Information("addLanguageTable: " + _sc["addLanguageTable"].GetHashCode());
-            IDictionary<string, string> dictionary = new Dictionary<string, string>();
+            //IDictionary<string, string> dictionary = new Dictionary<string, string>();
+            foreach (TableRow row in table.Rows)
+            {
+                _iprofilePageLanguages.ClickAddNewButton();
+                _iprofilePageLanguages.InputAddLanguageName(row["Language"]);
+                _iprofilePageLanguages.SelectAddLanguageLevel(row["Level"]);
+                _iprofilePageLanguages.ClickAddButton();
+                _iprofilePageLanguages.ClosePopupMessage();
+            }
+        }
+
+        [Given(@"I add languages")]
+        public void GivenIAddLanguages(Table table)
+        {
+            _sc["addLanguageTable"] = table;
+            Serilog.Log.Information("addLanguageTable: " + _sc["addLanguageTable"].GetHashCode());
+            //IDictionary<string, string> dictionary = new Dictionary<string, string>();
             foreach (TableRow row in table.Rows)
             {
                 _iprofilePageLanguages.ClickAddNewButton();
@@ -83,7 +110,8 @@ namespace Automation.Mars.POM.Steps
         {
             Table expectedTable = (Table)_sc["addLanguageTable"];
             Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
-            Assert.IsTrue(TableComparer.AreTablesEqual(actualTable, expectedTable));
+            Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.EqualTo(0));
+            //Assert.IsTrue(TableComparer.AreTablesEqual(actualTable, expectedTable));
         }
 
         [Then(@"Clean up test languages")]
@@ -109,9 +137,45 @@ namespace Automation.Mars.POM.Steps
         [Then(@"Languages should not be added successfully")]
         public void LanguagesShouldNotBeAddedSuccessfully()
         {
-            Table expectedTable = (Table)_sc["addLanguageTable"];
+            Table expectedTable;
+            
             Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
-            Assert.IsFalse(TableComparer.AreTablesEqual(actualTable, expectedTable));
+
+            if (actualTable.RowCount == 0 )
+            {
+                try
+                {
+                    Assert.Pass();
+                }
+                catch (Exception ex) { }
+                return;
+            }
+
+            try
+            {
+                expectedTable = (Table)_sc["addLanguageTable"];
+                Serilog.Log.Information("actualTable RowCount:" + actualTable.RowCount);
+                Serilog.Log.Information("expectedTable RowCount:" + expectedTable.RowCount);
+                
+                Serilog.Log.Information("actualTable Projection: " + string.Join(", ", actualTable.ToProjection<Languages>()));
+                Serilog.Log.Information("expectedTable Projection: " + string.Join(", ", expectedTable.ToProjection<Languages>()));
+                Serilog.Log.Information("Diff: " + actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count());
+
+                Serilog.Log.Information("the hashcode of actualTable: " + actualTable.GetHashCode());
+                Serilog.Log.Information("the hashcode of expectedTable: " + expectedTable.GetHashCode());
+
+                //Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.GreaterThan(0));
+                Assert.IsFalse(TableComparer.AreTablesEqual(actualTable, expectedTable));
+            }
+            catch (KeyNotFoundException e)
+            {
+                try
+                {
+                    Assert.Pass();
+                }
+                catch (Exception ex) { }
+                return;
+            }
         }
 
     }

@@ -39,6 +39,10 @@ namespace Automation.Mars.POM.Pages
         IAtWebElement CancelAddButton => _idriver.FindElement(byCancelAddButton);
         IAtBy byLanguageItems => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody");
         IAtWebElement LanguageItems => _idriver.FindElement(byLanguageItems);
+        IAtBy byLanguageName(int index) => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + index + "]/tr/td[1]");
+        IAtWebElement LanguageName(int index) => _idriver.FindElement(byLanguageName(index));
+        IAtBy byLanguageLevel(int index) => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + index + "]/tr/td[2]");
+        IAtWebElement LanguageLevel(int index) => _idriver.FindElement(byLanguageLevel(index));
         IAtBy byFirstLanguageName => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]");
         IAtWebElement FirstLanguageName => _idriver.FindElement(byFirstLanguageName);
         IAtBy byLastLanguagePenIcon => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[3]/span[1]/i");
@@ -53,12 +57,12 @@ namespace Automation.Mars.POM.Pages
         IAtWebElement CancelUpdateButton => _idriver.FindElement(byCancelUpdateButton);
         IAtBy byFirstLanguageRemoveIcon => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i");
         IAtWebElement FirstLanguageRemoveIcon => _idriver.FindElement(byFirstLanguageRemoveIcon);
-        IAtBy byPopUpMsg => GetBy(LocatorType.XPath, "//div[@class=\"ns-box-inner\" and contains(text(), \"your language\")]");
+        IAtBy byPopUpMsg => GetBy(LocatorType.XPath, "//div[contains(@class, \"ns-box-inner\")]");
         IAtWebElement PopUpMsg => _idriver.FindElement(byPopUpMsg);
         IAtBy byClosePopUp => GetBy(LocatorType.XPath, "//body/div[1]/a[1]");
         IAtWebElement ClosePopUp => _idriver.FindElement(byClosePopUp);
 
-        string textNodeNameXPath = "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/text()";
+        string textNodeUserNameXPath = "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/text()";
 
         public ProfileLanguages(IObjectContainer iobjectContainer)
             : base(iobjectContainer)
@@ -71,7 +75,7 @@ namespace Automation.Mars.POM.Pages
         {
 
             Log.Information("Unknow page load status. This greeting string is: " + Greeting.GetText());
-            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
             Log.Information("Page loaded fully. This greeting string is: " + Greeting.GetText());
 
             return Greeting.GetText();
@@ -80,7 +84,7 @@ namespace Automation.Mars.POM.Pages
         public string GetMyName()
         {
             Log.Information("Unknow page load status. My name is: " + MyName.GetText());
-            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
             Log.Information("Page loaded fully. My name is: " + MyName.GetText());
 
             return MyName.GetText();
@@ -93,7 +97,7 @@ namespace Automation.Mars.POM.Pages
             Profile.Click();
             LanguageTab.Click();
 
-            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
 
             int count = CountOfLanguages();
             Log.Information("Check the number of existing languages: " + count);
@@ -118,6 +122,7 @@ namespace Automation.Mars.POM.Pages
 
             Log.Information("The deletion popup message is : " + PopUpMsg.GetText());
 
+            // deal with a record has been deleted, but it is still on the page because of the system response.
             if (CountOfLanguages() > 0)
             {
                 while (firstItemName != FirstLanguageName.GetText())
@@ -129,7 +134,7 @@ namespace Automation.Mars.POM.Pages
 
         public int CountOfLanguages()
         {
-            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
             return LanguageItems.NumberOfElement;
         }
 
@@ -137,22 +142,33 @@ namespace Automation.Mars.POM.Pages
         {
             Table table = new Table("Language", "Level");
             int row = CountOfLanguages();
-            int column = 2;
-            IAtBy byLanguageCell;
-            IAtWebElement LanguageCell;
-            for (int i = 1; i <= row; i++)
-            {
-                string[] cells = new string[column];
-                for (int j = 1; j <= column; j++)
-                {
-                    byLanguageCell = GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[" + j + "]");
-                    LanguageCell = _idriver.FindElement(byLanguageCell);
-                    cells[j-1] = LanguageCell.GetText();
-                }
-                table.AddRow(cells);
-            }
+            Serilog.Log.Information("The number of languages on the page: " + row);
+            //int column = 2;
+            //IAtBy byLanguageCell;
+            //IAtWebElement LanguageCell;
 
-            return table;
+            //if (row == 0)
+            //{
+            //    return table;
+            //}else
+            //{
+                for (int i = 1; i <= row; i++)
+                {
+                    //string[] cells = new string[column];
+                    //for (int j = 1; j <= column; j++)
+                    //{
+                    //    byLanguageCell = GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[" + j + "]");
+                    //    LanguageCell = _idriver.FindElement(byLanguageCell);
+                    //    cells[j - 1] = LanguageCell.GetText();
+                    //}
+                    //table.AddRow(cells);
+                    table.AddRow(LanguageName(i).GetText(), LanguageLevel(i).GetText());
+                    Log.Information("LanguageName: " + LanguageName(i).GetText());
+                    Log.Information("LanguageLevel: " + LanguageLevel(i).GetText());
+                }
+
+                return table;
+            //}
         }
 
         public void ClickAddNewButton()
@@ -174,7 +190,12 @@ namespace Automation.Mars.POM.Pages
         {
             AddButton.Click();
             Log.Information("The popup message is : " + PopUpMsg.GetText());
-            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeNameXPath);
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
+        }
+
+        public void ClickCancelButton()
+        {
+            CancelAddButton.Click();
         }
 
         public string GetPopupMessage()

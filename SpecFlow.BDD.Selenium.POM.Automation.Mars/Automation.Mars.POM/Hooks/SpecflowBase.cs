@@ -33,6 +33,7 @@ namespace Automation.Mars.POM.Hooks
             IExtentReport extentReport = (IExtentReport)fc["iextentReport"];
             if (sc.TestError != null)
             {
+                Log.Information("Test Error: " + sc.TestError);
                 string base64 = null;
                 base64 = _idriver.GetScreenShot();
                 extentReport.Fail(sc.StepContext.StepInfo.Text, base64);

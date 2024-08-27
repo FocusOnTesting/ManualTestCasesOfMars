@@ -1,0 +1,101 @@
+2024-08-27 11:57:11.713 +12:00 [DBG] ********************************************************************************
+2024-08-27 11:57:11.718 +12:00 [INF] ********************************************************************************
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-27 11:57:11.719 +12:00 [INF] ********************************************************************************
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-27 11:57:11.719 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-27 11:57:11.719 +12:00 [INF] ********************************************************************************
+2024-08-27 11:57:11.719 +12:00 [INF] ********************************************************************************
+2024-08-27 11:57:16.625 +12:00 [INF] Check the number of existing languages: 1
+2024-08-27 11:57:16.650 +12:00 [INF] The name of first language is: English
+2024-08-27 11:57:17.305 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-27 11:57:17.313 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:57:17.497 +12:00 [INF] addLanguageTable: 41740762
+2024-08-27 11:57:18.248 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-27 11:57:18.386 +12:00 [INF] The number of languages on the page: 1
+2024-08-27 11:57:18.446 +12:00 [INF] LanguageName: English
+2024-08-27 11:57:18.463 +12:00 [INF] LanguageLevel: Fluent
+2024-08-27 11:57:25.485 +12:00 [INF] Check the number of existing languages: 1
+2024-08-27 11:57:25.512 +12:00 [INF] The name of first language is: English
+2024-08-27 11:57:26.157 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-27 11:57:26.167 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:57:26.336 +12:00 [INF] addLanguageTable: 35749630
+2024-08-27 11:57:27.087 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-27 11:57:27.365 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-27 11:57:27.798 +12:00 [INF] The popup message is : Janpanese has been added to your languages
+2024-08-27 11:57:28.226 +12:00 [INF] The popup message is : French has been added to your languages
+2024-08-27 11:57:28.432 +12:00 [INF] The number of languages on the page: 4
+2024-08-27 11:57:28.489 +12:00 [INF] LanguageName: English
+2024-08-27 11:57:28.507 +12:00 [INF] LanguageLevel: Basic
+2024-08-27 11:57:28.568 +12:00 [INF] LanguageName: Janpanese
+2024-08-27 11:57:28.585 +12:00 [INF] LanguageLevel: Conversational
+2024-08-27 11:57:28.647 +12:00 [INF] LanguageName: French
+2024-08-27 11:57:28.669 +12:00 [INF] LanguageLevel: Fluent
+2024-08-27 11:57:28.740 +12:00 [INF] LanguageName: Chinese
+2024-08-27 11:57:28.757 +12:00 [INF] LanguageLevel: Native/Bilingual
+2024-08-27 11:57:33.096 +12:00 [INF] Check the number of existing languages: 4
+2024-08-27 11:57:33.122 +12:00 [INF] The name of first language is: English
+2024-08-27 11:57:33.755 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-27 11:57:33.783 +12:00 [INF] Check the number of existing languages: 3
+2024-08-27 11:57:33.799 +12:00 [INF] The name of first language is: Janpanese
+2024-08-27 11:57:34.127 +12:00 [INF] The deletion popup message is : Janpanese has been deleted from your languages
+2024-08-27 11:57:34.154 +12:00 [INF] Check the number of existing languages: 2
+2024-08-27 11:57:34.173 +12:00 [INF] The name of first language is: French
+2024-08-27 11:57:34.499 +12:00 [INF] The deletion popup message is : French has been deleted from your languages
+2024-08-27 11:57:34.527 +12:00 [INF] Check the number of existing languages: 1
+2024-08-27 11:57:34.544 +12:00 [INF] The name of first language is: Chinese
+2024-08-27 11:57:34.923 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-27 11:57:34.934 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:57:35.105 +12:00 [INF] addLanguageTable: 4036676
+2024-08-27 11:57:35.850 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-27 11:57:36.629 +12:00 [INF] The popup message is : Duplicated data
+2024-08-27 11:57:36.772 +12:00 [INF] The number of languages on the page: 1
+2024-08-27 11:57:36.832 +12:00 [INF] LanguageName: English
+2024-08-27 11:57:36.849 +12:00 [INF] LanguageLevel: Basic
+2024-08-27 11:57:36.849 +12:00 [INF] actualTable RowCount:1
+2024-08-27 11:57:36.849 +12:00 [INF] expectedTable RowCount:2
+2024-08-27 11:57:36.850 +12:00 [INF] Diff: 0
+2024-08-27 11:57:36.850 +12:00 [INF] actualTable Projection: TechTalk.SpecFlow.Assist.Projection`1[Automation.Mars.POM.DataTables.Languages]
+2024-08-27 11:57:36.850 +12:00 [INF] expectedTable Projection: TechTalk.SpecFlow.Assist.Projection`1[Automation.Mars.POM.DataTables.Languages], TechTalk.SpecFlow.Assist.Projection`1[Automation.Mars.POM.DataTables.Languages]
+2024-08-27 11:57:36.851 +12:00 [INF] tableA.Header.Count: 2
+2024-08-27 11:57:36.851 +12:00 [INF] tableB.Header.Count: 2
+2024-08-27 11:57:36.851 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-27 11:57:36.851 +12:00 [INF] tableB.Rows.Count: 2
+2024-08-27 11:57:41.248 +12:00 [INF] Check the number of existing languages: 1
+2024-08-27 11:57:41.272 +12:00 [INF] The name of first language is: English
+2024-08-27 11:57:41.899 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-27 11:57:41.910 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:57:42.087 +12:00 [INF] addLanguageTable: 23725297
+2024-08-27 11:57:42.296 +12:00 [INF] The popup message is : Please enter language and level
+2024-08-27 11:57:42.451 +12:00 [INF] The number of languages on the page: 0
+2024-08-27 11:57:46.861 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:57:47.010 +12:00 [INF] addLanguageTable: 23911272
+2024-08-27 11:57:47.255 +12:00 [INF] The popup message is : Please enter language and level
+2024-08-27 11:57:47.424 +12:00 [INF] The number of languages on the page: 0
+2024-08-27 11:57:51.762 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:57:52.447 +12:00 [INF] The number of languages on the page: 0
+2024-08-27 11:57:56.868 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:57:57.024 +12:00 [INF] addLanguageTable: 31077419
+2024-08-27 11:57:57.761 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-27 11:58:02.689 +12:00 [INF] Check the number of existing languages: 1
+2024-08-27 11:58:02.714 +12:00 [INF] The name of first language is: French
+2024-08-27 11:58:03.347 +12:00 [INF] The deletion popup message is : French has been deleted from your languages
+2024-08-27 11:58:03.357 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:58:03.539 +12:00 [INF] addLanguageTable: 66074094
+2024-08-27 11:58:04.285 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-27 11:58:09.098 +12:00 [INF] Check the number of existing languages: 1
+2024-08-27 11:58:09.122 +12:00 [INF] The name of first language is: English
+2024-08-27 11:58:09.752 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-27 11:58:09.762 +12:00 [INF] Check the number of existing languages: 0
+2024-08-27 11:58:09.935 +12:00 [INF] addLanguageTable: 2319498
+2024-08-27 11:58:10.722 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-27 11:58:15.040 +12:00 [INF] Unknow page load status. This greeting string is: Hi Jay
+2024-08-27 11:58:15.590 +12:00 [INF] Page loaded fully. This greeting string is: Hi Jay
+2024-08-27 11:58:15.633 +12:00 [INF] Unknow page load status. My name is: Jay P
+2024-08-27 11:58:15.660 +12:00 [INF] Page loaded fully. My name is: Jay P
