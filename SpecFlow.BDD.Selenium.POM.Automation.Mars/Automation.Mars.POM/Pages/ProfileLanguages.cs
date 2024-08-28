@@ -100,6 +100,7 @@ namespace Automation.Mars.POM.Pages
             _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
 
             int count = CountOfLanguages();
+            Log.Information("------------Delete Stale Languages From Webpage------------");
             Log.Information("Check the number of existing languages: " + count);
             //Log.Information("The count of languages: " + _idriver.FindElementsCount(byLanguageItems));
             while (count > 0)
@@ -112,6 +113,7 @@ namespace Automation.Mars.POM.Pages
 
         public void DeleteFirstLanguage()
         {
+            
             string firstItemName = FirstLanguageName.GetText();
             Log.Information("The name of first language is: " + firstItemName);
 
@@ -140,35 +142,20 @@ namespace Automation.Mars.POM.Pages
 
         public Table GetLanguagesTable()
         {
+            Log.Information("------------Get Languages Table From Webpage------------");
+            _idriver.Refresh();
             Table table = new Table("Language", "Level");
             int row = CountOfLanguages();
-            Serilog.Log.Information("The number of languages on the page: " + row);
-            //int column = 2;
-            //IAtBy byLanguageCell;
-            //IAtWebElement LanguageCell;
+            Log.Information("The number of languages on the page: " + row);
 
-            //if (row == 0)
-            //{
-            //    return table;
-            //}else
-            //{
-                for (int i = 1; i <= row; i++)
-                {
-                    //string[] cells = new string[column];
-                    //for (int j = 1; j <= column; j++)
-                    //{
-                    //    byLanguageCell = GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[" + j + "]");
-                    //    LanguageCell = _idriver.FindElement(byLanguageCell);
-                    //    cells[j - 1] = LanguageCell.GetText();
-                    //}
-                    //table.AddRow(cells);
-                    table.AddRow(LanguageName(i).GetText(), LanguageLevel(i).GetText());
-                    Log.Information("LanguageName: " + LanguageName(i).GetText());
-                    Log.Information("LanguageLevel: " + LanguageLevel(i).GetText());
-                }
+            for (int i = 1; i <= row; i++)
+            {
+                table.AddRow(LanguageName(i).GetText(), LanguageLevel(i).GetText());
+                Log.Information("Get LanguageName: " + LanguageName(i).GetText());
+                Log.Information("Get LanguageLevel: " + LanguageLevel(i).GetText());
+            }
 
-                return table;
-            //}
+            return table;
         }
 
         public void ClickAddNewButton()
@@ -193,9 +180,14 @@ namespace Automation.Mars.POM.Pages
             _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
         }
 
-        public void ClickCancelButton()
+        public void ClickCancelButtonOfAddLanguage()
         {
             CancelAddButton.Click();
+        }
+
+        public void ClickCancelButtonOfUpdateLanguage()
+        {
+            CancelUpdateButton.Click();
         }
 
         public string GetPopupMessage()

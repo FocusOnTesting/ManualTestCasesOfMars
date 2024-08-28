@@ -40,34 +40,34 @@ namespace Automation.Mars.POM.Steps
             Assert.Zero(_iprofilePageLanguages.CountOfLanguages());
         }
 
-        [When(@"Click Add New button")]
-        public void WhenClickAddNewButton()
+        [When(@"I click Add New button")]
+        public void WhenIClickAddNewButton()
         {
             _iprofilePageLanguages.ClickAddNewButton();
         }
 
-        [When(@"Input a language '([^']*)'")]
-        public void WhenInputALanguage(string language)
+        [When(@"I input a language '([^']*)'")]
+        public void WhenIInputALanguage(string language)
         {
             _iprofilePageLanguages.InputAddLanguageName(language);
         }
 
-        [When(@"Choose a language level '([^']*)'")]
-        public void WhenChooseALanguageLevel(string level)
+        [When(@"I choose a language level '([^']*)'")]
+        public void WhenIChooseALanguageLevel(string level)
         {
             _iprofilePageLanguages.SelectAddLanguageLevel(level);
         }
 
-        [When(@"Click Add button")]
-        public void WhenClickAddButton()
+        [When(@"I click Add button")]
+        public void WhenIClickAddButton()
         {
             _iprofilePageLanguages.ClickAddButton();
         }        
         
-        [When(@"Click cancel button")]
-        public void WhenClickCancelButton()
+        [When(@"I click cancel button of add language")]
+        public void WhenIClickCancelButtonOfAddLanguage()
         {
-            _iprofilePageLanguages.ClickCancelButton();
+            _iprofilePageLanguages.ClickCancelButtonOfAddLanguage();
         }
 
 
@@ -110,14 +110,99 @@ namespace Automation.Mars.POM.Steps
         {
             Table expectedTable = (Table)_sc["addLanguageTable"];
             Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
-            Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.EqualTo(0));
-            //Assert.IsTrue(TableComparer.AreTablesEqual(actualTable, expectedTable));
+
+            TableUtils.PrintTable(expectedTable);
+            TableUtils.PrintTable(actualTable);
+
+            //Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.EqualTo(0));
+            Assert.IsTrue(TableUtils.AreTablesEqual(actualTable, expectedTable));
         }
 
         [Then(@"Clean up test languages")]
         public void ThenCleanUpTestLanguages(Table table)
         {
         }
+
+        [When(@"I update languages")]
+        public void WhenIUpdateLanguages(Table table)
+        {
+            _sc["updateLanguageTable"] = table;
+
+            foreach (TableRow row in table.Rows)
+            {
+                _iprofilePageLanguages.ClickPenIcon();
+                _iprofilePageLanguages.InputUpdateLanguageName(row["Language"]);
+                _iprofilePageLanguages.SelectUpdateLanguageLevel(row["Level"]);
+                _iprofilePageLanguages.ClickUpdateButton();
+                _iprofilePageLanguages.ClosePopupMessage();
+            }
+        }
+
+        [When(@"I click Update button")]
+        public void WhenIClickUpdateButton()
+        {
+            _iprofilePageLanguages.ClickPenIcon();
+        }
+
+        [When(@"I update a language name'([^']*)'")]
+        public void WhenIUpdateALanguageName(string language)
+        {
+            _iprofilePageLanguages.InputUpdateLanguageName(language);
+        }
+
+        [When(@"I update a language level '([^']*)'")]
+        public void WhenIUpdateALanguageLevel(string level)
+        {
+            _iprofilePageLanguages.SelectUpdateLanguageLevel(level);
+        }
+
+        [When(@"I click cancel button of update language")]
+        public void WhenIClickCancelButtonOfUpdateLanguage()
+        {
+            _iprofilePageLanguages.ClickCancelButtonOfUpdateLanguage();
+        }
+
+
+
+        [Then(@"Languages should be updated successfully")]
+        public void LanguagesShouldBeUpdatedSuccessfully()
+        {
+            Table expectedTable = (Table)_sc["updateLanguageTable"];
+            Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
+
+            TableUtils.PrintTable(expectedTable);
+            TableUtils.PrintTable(actualTable);
+
+            //Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.EqualTo(0));
+            Assert.IsTrue(TableUtils.AreTablesEqual(actualTable, expectedTable));
+        }
+
+        [Then(@"Languages should not be updated successfully")]
+        public void LanguagesShouldNotBeUpdatedSuccessfully()
+        {
+            Table expectedTable = (Table)_sc["updateLanguageTable"];
+            Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
+
+            TableUtils.PrintTable(expectedTable);
+            TableUtils.PrintTable(actualTable);
+
+            //Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.EqualTo(0));
+            Assert.IsTrue(TableUtils.AreTablesEqual(actualTable, expectedTable));
+        }
+
+        [Then(@"The languages shoud be the same as added")]
+        public void ThenTheLanguagesShoudBeTheSameAsAdded()
+        {
+            Table expectedTable = (Table)_sc["addLanguageTable"];
+            Table actualTable = _iprofilePageLanguages.GetLanguagesTable();
+
+            TableUtils.PrintTable(expectedTable);
+            TableUtils.PrintTable(actualTable);
+
+            //Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.EqualTo(0));
+            Assert.IsTrue(TableUtils.AreTablesEqual(actualTable, expectedTable));
+        }
+
 
         [When(@"I update the language '([^']*)' and level '([^']*)'")]
         public void WhenIUpdateTheLanguageAndLevel(string language, string level)
@@ -126,12 +211,19 @@ namespace Automation.Mars.POM.Steps
             _iprofilePageLanguages.InputUpdateLanguageName(language);
             _iprofilePageLanguages.SelectUpdateLanguageLevel(level);
             _iprofilePageLanguages.ClickUpdateButton();
+            _iprofilePageLanguages.ClosePopupMessage();
         }
-
+        
         [Then(@"The record is updated to new language '([^']*)' and level '([^']*)'")]
         public void ThenTheRecordIsUpdatedToNewLanguageAndLevel(string language, string level)
         {
 
+        }
+
+        [Then(@"An error message is displayed")]
+        public void ThenAnErrorMessageIsDisplayed()
+        {
+            Assert.That(_iprofilePageLanguages.GetPopupMessage(),Is.EqualTo("This language is already added to your language list."));
         }
 
         [Then(@"Languages should not be added successfully")]
@@ -165,7 +257,7 @@ namespace Automation.Mars.POM.Steps
                 Serilog.Log.Information("the hashcode of expectedTable: " + expectedTable.GetHashCode());
 
                 //Assert.That(actualTable.ToProjection<Languages>().Except(expectedTable.ToProjection<Languages>()).Count(), Is.GreaterThan(0));
-                Assert.IsFalse(TableComparer.AreTablesEqual(actualTable, expectedTable));
+                Assert.IsFalse(TableUtils.AreTablesEqual(actualTable, expectedTable));
             }
             catch (KeyNotFoundException e)
             {
@@ -178,5 +270,10 @@ namespace Automation.Mars.POM.Steps
             }
         }
 
+        [When(@"I delete languages")]
+        public void WhenIDeleteLanguages()
+        {
+            _iprofilePageLanguages.DeleteFirstLanguage();
+        }
     }
 }

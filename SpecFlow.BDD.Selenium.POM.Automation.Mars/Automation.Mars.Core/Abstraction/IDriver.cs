@@ -11,6 +11,7 @@ namespace Automation.Mars.Core.Abstraction
     {
         IWebDriver GetWebDriver();
         void CloseBrowser();
+        public void Refresh();
         IAtWebElement FindElement(IAtBy iatBy);
         void NavigateTo(string url);
         string GetPageTitle();
