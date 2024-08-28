@@ -77,6 +77,11 @@ namespace Automation.Mars.Core.DriverContext
             _iwebDriver.Quit();
         }
 
+        public void Refresh()
+        {
+            _iwebDriver.Navigate().Refresh();
+        }
+
         public void NavigateTo(string url)
         {
             GetWebDriver().Navigate().GoToUrl(url);
