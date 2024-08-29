@@ -180,12 +180,12 @@ namespace Automation.Mars.POM.Pages
             _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
         }
 
-        public void ClickCancelButtonOfAddLanguage()
+        public void ClickCancelButtonOfAddingLanguage()
         {
             CancelAddButton.Click();
         }
 
-        public void ClickCancelButtonOfUpdateLanguage()
+        public void ClickCancelButtonOfUpdatingLanguage()
         {
             CancelUpdateButton.Click();
         }

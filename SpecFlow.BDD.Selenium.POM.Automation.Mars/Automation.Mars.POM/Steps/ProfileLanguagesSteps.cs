@@ -40,7 +40,7 @@ namespace Automation.Mars.POM.Steps
             Assert.Zero(_iprofilePageLanguages.CountOfLanguages());
         }
 
-        [When(@"I click Add New button")]
+        [When(@"I click Add New button in Languages section")]
         public void WhenIClickAddNewButton()
         {
             _iprofilePageLanguages.ClickAddNewButton();
@@ -64,10 +64,10 @@ namespace Automation.Mars.POM.Steps
             _iprofilePageLanguages.ClickAddButton();
         }        
         
-        [When(@"I click cancel button of add language")]
-        public void WhenIClickCancelButtonOfAddLanguage()
+        [When(@"I click cancel button of adding language")]
+        public void WhenIClickCancelButtonOfAddingLanguage()
         {
-            _iprofilePageLanguages.ClickCancelButtonOfAddLanguage();
+            _iprofilePageLanguages.ClickCancelButtonOfAddingLanguage();
         }
 
 
@@ -138,7 +138,7 @@ namespace Automation.Mars.POM.Steps
             }
         }
 
-        [When(@"I click Update button")]
+        [When(@"I click Update button in Languages section")]
         public void WhenIClickUpdateButton()
         {
             _iprofilePageLanguages.ClickPenIcon();
@@ -156,10 +156,10 @@ namespace Automation.Mars.POM.Steps
             _iprofilePageLanguages.SelectUpdateLanguageLevel(level);
         }
 
-        [When(@"I click cancel button of update language")]
-        public void WhenIClickCancelButtonOfUpdateLanguage()
+        [When(@"I click cancel button of updating language")]
+        public void WhenIClickCancelButtonOfUpdatingLanguage()
         {
-            _iprofilePageLanguages.ClickCancelButtonOfUpdateLanguage();
+            _iprofilePageLanguages.ClickCancelButtonOfUpdatingLanguage();
         }
 
 
@@ -220,7 +220,7 @@ namespace Automation.Mars.POM.Steps
 
         }
 
-        [Then(@"An error message is displayed")]
+        [Then(@"An error message is displayed for updating language operation")]
         public void ThenAnErrorMessageIsDisplayed()
         {
             Assert.That(_iprofilePageLanguages.GetPopupMessage(),Is.EqualTo("This language is already added to your language list."));

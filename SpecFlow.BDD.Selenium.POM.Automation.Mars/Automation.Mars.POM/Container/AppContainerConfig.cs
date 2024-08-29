@@ -24,6 +24,7 @@ namespace Automation.Mars.POM.Container
             iobjectContainer.RegisterTypeAs<AppConfiguration, IAppConfiguration>();
             iobjectContainer.RegisterTypeAs<LoginPage, ILoginPage>();
             iobjectContainer.RegisterTypeAs<ProfileLanguages, IProfileLanguages>();
+            iobjectContainer.RegisterTypeAs<ProfileSkills, IProfileSkills>();
             iobjectContainer = CoreContainerConfig.SetAppContainer(iobjectContainer);
 
         }

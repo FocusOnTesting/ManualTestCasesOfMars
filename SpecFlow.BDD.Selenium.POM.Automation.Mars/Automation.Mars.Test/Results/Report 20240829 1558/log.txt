@@ -1,0 +1,581 @@
+2024-08-29 15:58:15.115 +12:00 [DBG] ********************************************************************************
+2024-08-29 15:58:15.120 +12:00 [INF] ********************************************************************************
+2024-08-29 15:58:15.120 +12:00 [INF] Configuration |RUN PARAMETERS
+2024-08-29 15:58:15.120 +12:00 [INF] ********************************************************************************
+2024-08-29 15:58:15.120 +12:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-08-29 15:58:15.120 +12:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-08-29 15:58:15.120 +12:00 [INF] Configuration|STEP SCREENSHOT: True
+2024-08-29 15:58:15.120 +12:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-08-29 15:58:15.121 +12:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-08-29 15:58:15.121 +12:00 [INF] Configuration|LOG LEVEL: Debug
+2024-08-29 15:58:15.121 +12:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-29 15:58:15.121 +12:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Jay\Documents\IndustryConnect\GitRepository\Project.Mars\SpecFlow.BDD.Selenium.POM.Automation.Mars\Automation.Mars.Test\DataSet
+2024-08-29 15:58:15.121 +12:00 [INF] ********************************************************************************
+2024-08-29 15:58:15.121 +12:00 [INF] ********************************************************************************
+2024-08-29 15:58:19.155 +12:00 [INF] Unknow page load status. This greeting string is: Hi Jay
+2024-08-29 15:58:19.695 +12:00 [INF] Page loaded fully. This greeting string is: Hi Jay
+2024-08-29 15:58:19.740 +12:00 [INF] Unknow page load status. My name is: Jay P
+2024-08-29 15:58:19.764 +12:00 [INF] Page loaded fully. My name is: Jay P
+2024-08-29 15:58:26.865 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:58:26.866 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:58:27.031 +12:00 [INF] addLanguageTable: 35407577
+2024-08-29 15:58:27.786 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-29 15:58:27.923 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:58:29.049 +12:00 [INF] The number of languages on the page: 1
+2024-08-29 15:58:29.112 +12:00 [INF] Get LanguageName: English
+2024-08-29 15:58:29.130 +12:00 [INF] Get LanguageLevel: Fluent
+2024-08-29 15:58:29.130 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:58:29.130 +12:00 [INF] Language: English
+2024-08-29 15:58:29.130 +12:00 [INF] Level: Fluent
+2024-08-29 15:58:29.130 +12:00 [INF] 
+2024-08-29 15:58:29.130 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:58:29.130 +12:00 [INF] Language: English
+2024-08-29 15:58:29.130 +12:00 [INF] Level: Fluent
+2024-08-29 15:58:29.130 +12:00 [INF] 
+2024-08-29 15:58:29.131 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:58:29.131 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:58:29.131 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:58:29.131 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 15:58:29.131 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 15:58:29.131 +12:00 [INF] Line number: 0
+2024-08-29 15:58:29.131 +12:00 [INF] columnName: Language
+2024-08-29 15:58:29.131 +12:00 [INF] Actual value: English
+2024-08-29 15:58:29.131 +12:00 [INF] Expected value: English
+2024-08-29 15:58:29.131 +12:00 [INF] columnName: Level
+2024-08-29 15:58:29.131 +12:00 [INF] Actual value: Fluent
+2024-08-29 15:58:29.131 +12:00 [INF] Expected value: Fluent
+2024-08-29 15:58:33.502 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:58:33.502 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:58:33.528 +12:00 [INF] The name of first language is: English
+2024-08-29 15:58:34.160 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-29 15:58:34.171 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:58:34.339 +12:00 [INF] addLanguageTable: 4669961
+2024-08-29 15:58:35.093 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-29 15:58:35.360 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-29 15:58:35.768 +12:00 [INF] The popup message is : Janpanese has been added to your languages
+2024-08-29 15:58:36.160 +12:00 [INF] The popup message is : French has been added to your languages
+2024-08-29 15:58:36.404 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:58:37.013 +12:00 [INF] The number of languages on the page: 4
+2024-08-29 15:58:37.068 +12:00 [INF] Get LanguageName: English
+2024-08-29 15:58:37.085 +12:00 [INF] Get LanguageLevel: Basic
+2024-08-29 15:58:37.146 +12:00 [INF] Get LanguageName: Janpanese
+2024-08-29 15:58:37.164 +12:00 [INF] Get LanguageLevel: Conversational
+2024-08-29 15:58:37.225 +12:00 [INF] Get LanguageName: French
+2024-08-29 15:58:37.244 +12:00 [INF] Get LanguageLevel: Fluent
+2024-08-29 15:58:37.305 +12:00 [INF] Get LanguageName: Chinese
+2024-08-29 15:58:37.322 +12:00 [INF] Get LanguageLevel: Native/Bilingual
+2024-08-29 15:58:37.322 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:58:37.322 +12:00 [INF] Language: English
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Basic
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] Language: Janpanese
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Conversational
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] Language: French
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Fluent
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] Language: Chinese
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Native/Bilingual
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:58:37.322 +12:00 [INF] Language: English
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Basic
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] Language: Janpanese
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Conversational
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] Language: French
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Fluent
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] Language: Chinese
+2024-08-29 15:58:37.322 +12:00 [INF] Level: Native/Bilingual
+2024-08-29 15:58:37.322 +12:00 [INF] 
+2024-08-29 15:58:37.322 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:58:37.322 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:58:37.322 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:58:37.323 +12:00 [INF] tableA.Rows.Count: 4
+2024-08-29 15:58:37.323 +12:00 [INF] tableB.Rows.Count: 4
+2024-08-29 15:58:37.323 +12:00 [INF] Line number: 0
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Language
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: English
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: English
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Level
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: Basic
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: Basic
+2024-08-29 15:58:37.323 +12:00 [INF] Line number: 1
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Language
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: Janpanese
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: Janpanese
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Level
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: Conversational
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: Conversational
+2024-08-29 15:58:37.323 +12:00 [INF] Line number: 2
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Language
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: French
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: French
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Level
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: Fluent
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: Fluent
+2024-08-29 15:58:37.323 +12:00 [INF] Line number: 3
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Language
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: Chinese
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: Chinese
+2024-08-29 15:58:37.323 +12:00 [INF] columnName: Level
+2024-08-29 15:58:37.323 +12:00 [INF] Actual value: Native/Bilingual
+2024-08-29 15:58:37.323 +12:00 [INF] Expected value: Native/Bilingual
+2024-08-29 15:58:41.721 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:58:41.721 +12:00 [INF] Check the number of existing languages: 4
+2024-08-29 15:58:41.746 +12:00 [INF] The name of first language is: English
+2024-08-29 15:58:42.371 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-29 15:58:42.399 +12:00 [INF] Check the number of existing languages: 3
+2024-08-29 15:58:42.417 +12:00 [INF] The name of first language is: Janpanese
+2024-08-29 15:58:42.739 +12:00 [INF] The deletion popup message is : Janpanese has been deleted from your languages
+2024-08-29 15:58:42.769 +12:00 [INF] Check the number of existing languages: 2
+2024-08-29 15:58:42.788 +12:00 [INF] The name of first language is: French
+2024-08-29 15:58:43.170 +12:00 [INF] The deletion popup message is : French has been deleted from your languages
+2024-08-29 15:58:43.197 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:58:43.215 +12:00 [INF] The name of first language is: Chinese
+2024-08-29 15:58:43.594 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-29 15:58:43.603 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:58:43.777 +12:00 [INF] addLanguageTable: 36053156
+2024-08-29 15:58:44.532 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-29 15:58:45.294 +12:00 [INF] The popup message is : Duplicated data
+2024-08-29 15:58:45.422 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:58:46.544 +12:00 [INF] The number of languages on the page: 1
+2024-08-29 15:58:46.597 +12:00 [INF] Get LanguageName: English
+2024-08-29 15:58:46.614 +12:00 [INF] Get LanguageLevel: Basic
+2024-08-29 15:58:46.615 +12:00 [INF] actualTable RowCount:1
+2024-08-29 15:58:46.615 +12:00 [INF] expectedTable RowCount:2
+2024-08-29 15:58:46.629 +12:00 [INF] actualTable Projection: TechTalk.SpecFlow.Assist.Projection`1[Automation.Mars.POM.DataTables.Languages]
+2024-08-29 15:58:46.630 +12:00 [INF] expectedTable Projection: TechTalk.SpecFlow.Assist.Projection`1[Automation.Mars.POM.DataTables.Languages], TechTalk.SpecFlow.Assist.Projection`1[Automation.Mars.POM.DataTables.Languages]
+2024-08-29 15:58:46.631 +12:00 [INF] Diff: 0
+2024-08-29 15:58:46.631 +12:00 [INF] the hashcode of actualTable: 42365891
+2024-08-29 15:58:46.631 +12:00 [INF] the hashcode of expectedTable: 36053156
+2024-08-29 15:58:46.631 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:58:46.631 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:58:46.631 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:58:46.631 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 15:58:46.631 +12:00 [INF] tableB.Rows.Count: 2
+2024-08-29 15:58:50.971 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:58:50.972 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:58:50.997 +12:00 [INF] The name of first language is: English
+2024-08-29 15:58:51.628 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-29 15:58:51.638 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:58:51.814 +12:00 [INF] addLanguageTable: 43808263
+2024-08-29 15:58:52.027 +12:00 [INF] The popup message is : Please enter language and level
+2024-08-29 15:58:52.181 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:58:53.301 +12:00 [INF] The number of languages on the page: 0
+2024-08-29 15:58:57.709 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:58:57.709 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:58:57.867 +12:00 [INF] addLanguageTable: 58990251
+2024-08-29 15:58:58.102 +12:00 [INF] The popup message is : Please enter language and level
+2024-08-29 15:58:58.281 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:58:59.421 +12:00 [INF] The number of languages on the page: 0
+2024-08-29 15:59:03.897 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:03.897 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:04.599 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:59:05.730 +12:00 [INF] The number of languages on the page: 0
+2024-08-29 15:59:10.173 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:10.173 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:10.327 +12:00 [INF] addLanguageTable: 23229957
+2024-08-29 15:59:11.072 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-29 15:59:12.157 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:59:13.287 +12:00 [INF] The number of languages on the page: 1
+2024-08-29 15:59:13.346 +12:00 [INF] Get LanguageName: French
+2024-08-29 15:59:13.363 +12:00 [INF] Get LanguageLevel: Fluent
+2024-08-29 15:59:13.363 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:13.363 +12:00 [INF] Language: French
+2024-08-29 15:59:13.363 +12:00 [INF] Level: Fluent
+2024-08-29 15:59:13.363 +12:00 [INF] 
+2024-08-29 15:59:13.363 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:13.363 +12:00 [INF] Language: French
+2024-08-29 15:59:13.363 +12:00 [INF] Level: Fluent
+2024-08-29 15:59:13.363 +12:00 [INF] 
+2024-08-29 15:59:13.363 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:59:13.363 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:59:13.363 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:59:13.363 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 15:59:13.363 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 15:59:13.363 +12:00 [INF] Line number: 0
+2024-08-29 15:59:13.363 +12:00 [INF] columnName: Language
+2024-08-29 15:59:13.363 +12:00 [INF] Actual value: French
+2024-08-29 15:59:13.363 +12:00 [INF] Expected value: French
+2024-08-29 15:59:13.363 +12:00 [INF] columnName: Level
+2024-08-29 15:59:13.363 +12:00 [INF] Actual value: Fluent
+2024-08-29 15:59:13.363 +12:00 [INF] Expected value: Fluent
+2024-08-29 15:59:17.713 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:17.713 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:59:17.737 +12:00 [INF] The name of first language is: French
+2024-08-29 15:59:18.366 +12:00 [INF] The deletion popup message is : French has been deleted from your languages
+2024-08-29 15:59:18.374 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:18.544 +12:00 [INF] addLanguageTable: 62318435
+2024-08-29 15:59:19.282 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-29 15:59:20.305 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:59:21.428 +12:00 [INF] The number of languages on the page: 1
+2024-08-29 15:59:21.493 +12:00 [INF] Get LanguageName: English
+2024-08-29 15:59:21.511 +12:00 [INF] Get LanguageLevel: Basic
+2024-08-29 15:59:21.511 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:21.511 +12:00 [INF] Language: English
+2024-08-29 15:59:21.511 +12:00 [INF] Level: Basic
+2024-08-29 15:59:21.511 +12:00 [INF] 
+2024-08-29 15:59:21.511 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:21.511 +12:00 [INF] Language: English
+2024-08-29 15:59:21.511 +12:00 [INF] Level: Basic
+2024-08-29 15:59:21.511 +12:00 [INF] 
+2024-08-29 15:59:21.511 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:59:21.511 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:59:21.511 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:59:21.511 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 15:59:21.511 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 15:59:21.511 +12:00 [INF] Line number: 0
+2024-08-29 15:59:21.511 +12:00 [INF] columnName: Language
+2024-08-29 15:59:21.511 +12:00 [INF] Actual value: English
+2024-08-29 15:59:21.511 +12:00 [INF] Expected value: English
+2024-08-29 15:59:21.511 +12:00 [INF] columnName: Level
+2024-08-29 15:59:21.511 +12:00 [INF] Actual value: Basic
+2024-08-29 15:59:21.511 +12:00 [INF] Expected value: Basic
+2024-08-29 15:59:25.883 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:25.883 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:59:25.906 +12:00 [INF] The name of first language is: English
+2024-08-29 15:59:26.543 +12:00 [INF] The deletion popup message is : English has been deleted from your languages
+2024-08-29 15:59:26.551 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:26.724 +12:00 [INF] addLanguageTable: 61815975
+2024-08-29 15:59:27.470 +12:00 [INF] The popup message is : English has been added to your languages
+2024-08-29 15:59:28.488 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:59:29.595 +12:00 [INF] The number of languages on the page: 1
+2024-08-29 15:59:29.654 +12:00 [INF] Get LanguageName: French
+2024-08-29 15:59:29.673 +12:00 [INF] Get LanguageLevel: Basic
+2024-08-29 15:59:29.673 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:29.673 +12:00 [INF] Language: French
+2024-08-29 15:59:29.673 +12:00 [INF] Level: Basic
+2024-08-29 15:59:29.673 +12:00 [INF] 
+2024-08-29 15:59:29.673 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:29.673 +12:00 [INF] Language: French
+2024-08-29 15:59:29.673 +12:00 [INF] Level: Basic
+2024-08-29 15:59:29.673 +12:00 [INF] 
+2024-08-29 15:59:29.673 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:59:29.673 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:59:29.673 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:59:29.673 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 15:59:29.673 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 15:59:29.673 +12:00 [INF] Line number: 0
+2024-08-29 15:59:29.673 +12:00 [INF] columnName: Language
+2024-08-29 15:59:29.673 +12:00 [INF] Actual value: French
+2024-08-29 15:59:29.673 +12:00 [INF] Expected value: French
+2024-08-29 15:59:29.673 +12:00 [INF] columnName: Level
+2024-08-29 15:59:29.673 +12:00 [INF] Actual value: Basic
+2024-08-29 15:59:29.673 +12:00 [INF] Expected value: Basic
+2024-08-29 15:59:34.161 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:34.161 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:59:34.184 +12:00 [INF] The name of first language is: French
+2024-08-29 15:59:34.817 +12:00 [INF] The deletion popup message is : French has been deleted from your languages
+2024-08-29 15:59:34.827 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:35.006 +12:00 [INF] addLanguageTable: 61902941
+2024-08-29 15:59:35.750 +12:00 [INF] The popup message is : Chinese has been added to your languages
+2024-08-29 15:59:36.774 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:59:37.891 +12:00 [INF] The number of languages on the page: 1
+2024-08-29 15:59:37.945 +12:00 [INF] Get LanguageName: Chinese
+2024-08-29 15:59:37.963 +12:00 [INF] Get LanguageLevel: Basic
+2024-08-29 15:59:37.963 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:37.963 +12:00 [INF] Language: Chinese
+2024-08-29 15:59:37.963 +12:00 [INF] Level: Basic
+2024-08-29 15:59:37.963 +12:00 [INF] 
+2024-08-29 15:59:37.963 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:37.963 +12:00 [INF] Language: Chinese
+2024-08-29 15:59:37.963 +12:00 [INF] Level: Basic
+2024-08-29 15:59:37.963 +12:00 [INF] 
+2024-08-29 15:59:37.963 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:59:37.963 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:59:37.963 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:59:37.963 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 15:59:37.963 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 15:59:37.963 +12:00 [INF] Line number: 0
+2024-08-29 15:59:37.963 +12:00 [INF] columnName: Language
+2024-08-29 15:59:37.963 +12:00 [INF] Actual value: Chinese
+2024-08-29 15:59:37.963 +12:00 [INF] Expected value: Chinese
+2024-08-29 15:59:37.963 +12:00 [INF] columnName: Level
+2024-08-29 15:59:37.963 +12:00 [INF] Actual value: Basic
+2024-08-29 15:59:37.963 +12:00 [INF] Expected value: Basic
+2024-08-29 15:59:42.499 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:42.499 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:59:42.524 +12:00 [INF] The name of first language is: Chinese
+2024-08-29 15:59:43.153 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-29 15:59:43.162 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:43.331 +12:00 [INF] addLanguageTable: 27780291
+2024-08-29 15:59:44.073 +12:00 [INF] The popup message is : Chinese has been added to your languages
+2024-08-29 15:59:49.679 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:49.679 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:59:49.705 +12:00 [INF] The name of first language is: Chinese
+2024-08-29 15:59:50.336 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-29 15:59:50.346 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:50.522 +12:00 [INF] addLanguageTable: 61270331
+2024-08-29 15:59:51.267 +12:00 [INF] The popup message is : Chinese has been added to your languages
+2024-08-29 15:59:51.986 +12:00 [INF] ------------Get Languages Table From Webpage------------
+2024-08-29 15:59:53.110 +12:00 [INF] The number of languages on the page: 1
+2024-08-29 15:59:53.169 +12:00 [INF] Get LanguageName: Chinese
+2024-08-29 15:59:53.189 +12:00 [INF] Get LanguageLevel: Fluent
+2024-08-29 15:59:53.189 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:53.189 +12:00 [INF] Language: Chinese
+2024-08-29 15:59:53.189 +12:00 [INF] Level: Fluent
+2024-08-29 15:59:53.189 +12:00 [INF] 
+2024-08-29 15:59:53.189 +12:00 [INF] ------------Print Table------------
+2024-08-29 15:59:53.189 +12:00 [INF] Language: Chinese
+2024-08-29 15:59:53.189 +12:00 [INF] Level: Fluent
+2024-08-29 15:59:53.189 +12:00 [INF] 
+2024-08-29 15:59:53.189 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 15:59:53.189 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 15:59:53.189 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 15:59:53.189 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 15:59:53.189 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 15:59:53.189 +12:00 [INF] Line number: 0
+2024-08-29 15:59:53.189 +12:00 [INF] columnName: Language
+2024-08-29 15:59:53.189 +12:00 [INF] Actual value: Chinese
+2024-08-29 15:59:53.189 +12:00 [INF] Expected value: Chinese
+2024-08-29 15:59:53.189 +12:00 [INF] columnName: Level
+2024-08-29 15:59:53.189 +12:00 [INF] Actual value: Fluent
+2024-08-29 15:59:53.189 +12:00 [INF] Expected value: Fluent
+2024-08-29 15:59:57.715 +12:00 [INF] ------------Delete Stale Languages From Webpage------------
+2024-08-29 15:59:57.715 +12:00 [INF] Check the number of existing languages: 1
+2024-08-29 15:59:57.742 +12:00 [INF] The name of first language is: Chinese
+2024-08-29 15:59:58.373 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-29 15:59:58.386 +12:00 [INF] Check the number of existing languages: 0
+2024-08-29 15:59:58.578 +12:00 [INF] addLanguageTable: 37482599
+2024-08-29 15:59:59.326 +12:00 [INF] The popup message is : Chinese has been added to your languages
+2024-08-29 15:59:59.472 +12:00 [INF] The name of first language is: Chinese
+2024-08-29 15:59:59.801 +12:00 [INF] The deletion popup message is : Chinese has been deleted from your languages
+2024-08-29 16:00:04.408 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:04.408 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:04.579 +12:00 [INF] addSkillTable: 59072606
+2024-08-29 16:00:05.332 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:00:05.471 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:06.261 +12:00 [INF] The number of Skills on the page: 1
+2024-08-29 16:00:06.323 +12:00 [INF] Get SkillName: CSharp
+2024-08-29 16:00:06.343 +12:00 [INF] Get SkillLevel: Beginner
+2024-08-29 16:00:06.343 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:06.343 +12:00 [INF] Skill: CSharp
+2024-08-29 16:00:06.343 +12:00 [INF] Level: Beginner
+2024-08-29 16:00:06.343 +12:00 [INF] 
+2024-08-29 16:00:06.343 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:06.343 +12:00 [INF] Skill: CSharp
+2024-08-29 16:00:06.343 +12:00 [INF] Level: Beginner
+2024-08-29 16:00:06.343 +12:00 [INF] 
+2024-08-29 16:00:06.343 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 16:00:06.343 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 16:00:06.343 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 16:00:06.343 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 16:00:06.343 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 16:00:06.343 +12:00 [INF] Line number: 0
+2024-08-29 16:00:06.343 +12:00 [INF] columnName: Skill
+2024-08-29 16:00:06.343 +12:00 [INF] Actual value: CSharp
+2024-08-29 16:00:06.343 +12:00 [INF] Expected value: CSharp
+2024-08-29 16:00:06.343 +12:00 [INF] columnName: Level
+2024-08-29 16:00:06.343 +12:00 [INF] Actual value: Beginner
+2024-08-29 16:00:06.343 +12:00 [INF] Expected value: Beginner
+2024-08-29 16:00:10.773 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:10.773 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:00:10.798 +12:00 [INF] The name of first Skill is: CSharp
+2024-08-29 16:00:11.435 +12:00 [INF] The deletion popup message is : CSharp has been deleted
+2024-08-29 16:00:11.446 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:11.626 +12:00 [INF] addSkillTable: 18361796
+2024-08-29 16:00:12.365 +12:00 [INF] The popup message is : Java has been added to your skills
+2024-08-29 16:00:12.629 +12:00 [INF] The popup message is : Duplicated data
+2024-08-29 16:00:12.778 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:13.557 +12:00 [INF] The number of Skills on the page: 1
+2024-08-29 16:00:13.615 +12:00 [INF] Get SkillName: Java
+2024-08-29 16:00:13.634 +12:00 [INF] Get SkillLevel: Beginner
+2024-08-29 16:00:13.634 +12:00 [INF] actualTable RowCount:1
+2024-08-29 16:00:13.634 +12:00 [INF] expectedTable RowCount:2
+2024-08-29 16:00:13.634 +12:00 [INF] the hashcode of actualTable: 33971491
+2024-08-29 16:00:13.634 +12:00 [INF] the hashcode of expectedTable: 18361796
+2024-08-29 16:00:13.634 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 16:00:13.634 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 16:00:13.634 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 16:00:13.634 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 16:00:13.634 +12:00 [INF] tableB.Rows.Count: 2
+2024-08-29 16:00:18.221 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:18.221 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:00:18.245 +12:00 [INF] The name of first Skill is: Java
+2024-08-29 16:00:18.882 +12:00 [INF] The deletion popup message is : Java has been deleted
+2024-08-29 16:00:18.892 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:19.069 +12:00 [INF] addSkillTable: 31984592
+2024-08-29 16:00:19.286 +12:00 [INF] The popup message is : Please enter skill and experience level
+2024-08-29 16:00:19.425 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:20.196 +12:00 [INF] The number of Skills on the page: 0
+2024-08-29 16:00:24.695 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:24.695 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:24.846 +12:00 [INF] addSkillTable: 8238011
+2024-08-29 16:00:25.081 +12:00 [INF] The popup message is : Please enter skill and experience level
+2024-08-29 16:00:25.250 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:26.018 +12:00 [INF] The number of Skills on the page: 0
+2024-08-29 16:00:30.497 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:30.497 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:31.184 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:31.959 +12:00 [INF] The number of Skills on the page: 0
+2024-08-29 16:00:36.930 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:36.930 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:37.088 +12:00 [INF] addSkillTable: 61295179
+2024-08-29 16:00:37.826 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:00:38.867 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:40.161 +12:00 [INF] The number of Skills on the page: 1
+2024-08-29 16:00:40.222 +12:00 [INF] Get SkillName: Java
+2024-08-29 16:00:40.239 +12:00 [INF] Get SkillLevel: Beginner
+2024-08-29 16:00:40.239 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:40.239 +12:00 [INF] Skill: Java
+2024-08-29 16:00:40.239 +12:00 [INF] Level: Beginner
+2024-08-29 16:00:40.239 +12:00 [INF] 
+2024-08-29 16:00:40.239 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:40.239 +12:00 [INF] Skill: Java
+2024-08-29 16:00:40.239 +12:00 [INF] Level: Beginner
+2024-08-29 16:00:40.239 +12:00 [INF] 
+2024-08-29 16:00:40.239 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 16:00:40.239 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 16:00:40.239 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 16:00:40.239 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 16:00:40.239 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 16:00:40.239 +12:00 [INF] Line number: 0
+2024-08-29 16:00:40.239 +12:00 [INF] columnName: Skill
+2024-08-29 16:00:40.239 +12:00 [INF] Actual value: Java
+2024-08-29 16:00:40.239 +12:00 [INF] Expected value: Java
+2024-08-29 16:00:40.239 +12:00 [INF] columnName: Level
+2024-08-29 16:00:40.239 +12:00 [INF] Actual value: Beginner
+2024-08-29 16:00:40.239 +12:00 [INF] Expected value: Beginner
+2024-08-29 16:00:44.670 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:44.670 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:00:44.696 +12:00 [INF] The name of first Skill is: Java
+2024-08-29 16:00:45.339 +12:00 [INF] The deletion popup message is : Java has been deleted
+2024-08-29 16:00:45.348 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:45.548 +12:00 [INF] addSkillTable: 59086876
+2024-08-29 16:00:46.320 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:00:47.422 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:48.227 +12:00 [INF] The number of Skills on the page: 1
+2024-08-29 16:00:48.290 +12:00 [INF] Get SkillName: CSharp
+2024-08-29 16:00:48.311 +12:00 [INF] Get SkillLevel: Intermediate
+2024-08-29 16:00:48.311 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:48.311 +12:00 [INF] Skill: CSharp
+2024-08-29 16:00:48.311 +12:00 [INF] Level: Intermediate
+2024-08-29 16:00:48.311 +12:00 [INF] 
+2024-08-29 16:00:48.311 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:48.311 +12:00 [INF] Skill: CSharp
+2024-08-29 16:00:48.311 +12:00 [INF] Level: Intermediate
+2024-08-29 16:00:48.311 +12:00 [INF] 
+2024-08-29 16:00:48.311 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 16:00:48.311 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 16:00:48.311 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 16:00:48.311 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 16:00:48.311 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 16:00:48.311 +12:00 [INF] Line number: 0
+2024-08-29 16:00:48.311 +12:00 [INF] columnName: Skill
+2024-08-29 16:00:48.311 +12:00 [INF] Actual value: CSharp
+2024-08-29 16:00:48.311 +12:00 [INF] Expected value: CSharp
+2024-08-29 16:00:48.311 +12:00 [INF] columnName: Level
+2024-08-29 16:00:48.311 +12:00 [INF] Actual value: Intermediate
+2024-08-29 16:00:48.311 +12:00 [INF] Expected value: Intermediate
+2024-08-29 16:00:52.877 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:00:52.877 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:00:52.900 +12:00 [INF] The name of first Skill is: CSharp
+2024-08-29 16:00:53.522 +12:00 [INF] The deletion popup message is : CSharp has been deleted
+2024-08-29 16:00:53.532 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:00:53.706 +12:00 [INF] addSkillTable: 16536107
+2024-08-29 16:00:54.456 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:00:55.487 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:00:56.272 +12:00 [INF] The number of Skills on the page: 1
+2024-08-29 16:00:56.330 +12:00 [INF] Get SkillName: Java
+2024-08-29 16:00:56.347 +12:00 [INF] Get SkillLevel: Intermediate
+2024-08-29 16:00:56.347 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:56.347 +12:00 [INF] Skill: Java
+2024-08-29 16:00:56.347 +12:00 [INF] Level: Intermediate
+2024-08-29 16:00:56.347 +12:00 [INF] 
+2024-08-29 16:00:56.347 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:00:56.347 +12:00 [INF] Skill: Java
+2024-08-29 16:00:56.347 +12:00 [INF] Level: Intermediate
+2024-08-29 16:00:56.347 +12:00 [INF] 
+2024-08-29 16:00:56.347 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 16:00:56.347 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 16:00:56.347 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 16:00:56.347 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 16:00:56.347 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 16:00:56.347 +12:00 [INF] Line number: 0
+2024-08-29 16:00:56.347 +12:00 [INF] columnName: Skill
+2024-08-29 16:00:56.347 +12:00 [INF] Actual value: Java
+2024-08-29 16:00:56.347 +12:00 [INF] Expected value: Java
+2024-08-29 16:00:56.347 +12:00 [INF] columnName: Level
+2024-08-29 16:00:56.347 +12:00 [INF] Actual value: Intermediate
+2024-08-29 16:00:56.347 +12:00 [INF] Expected value: Intermediate
+2024-08-29 16:01:00.941 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:01:00.941 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:01:00.965 +12:00 [INF] The name of first Skill is: Java
+2024-08-29 16:01:01.605 +12:00 [INF] The deletion popup message is : Java has been deleted
+2024-08-29 16:01:01.615 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:01:01.788 +12:00 [INF] addSkillTable: 27097386
+2024-08-29 16:01:02.550 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:01:03.598 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:01:04.366 +12:00 [INF] The number of Skills on the page: 1
+2024-08-29 16:01:04.432 +12:00 [INF] Get SkillName: CSharp
+2024-08-29 16:01:04.450 +12:00 [INF] Get SkillLevel: Intermediate
+2024-08-29 16:01:04.450 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:01:04.450 +12:00 [INF] Skill: CSharp
+2024-08-29 16:01:04.450 +12:00 [INF] Level: Intermediate
+2024-08-29 16:01:04.450 +12:00 [INF] 
+2024-08-29 16:01:04.450 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:01:04.450 +12:00 [INF] Skill: CSharp
+2024-08-29 16:01:04.450 +12:00 [INF] Level: Intermediate
+2024-08-29 16:01:04.450 +12:00 [INF] 
+2024-08-29 16:01:04.450 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 16:01:04.450 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 16:01:04.450 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 16:01:04.450 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 16:01:04.450 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 16:01:04.450 +12:00 [INF] Line number: 0
+2024-08-29 16:01:04.450 +12:00 [INF] columnName: Skill
+2024-08-29 16:01:04.450 +12:00 [INF] Actual value: CSharp
+2024-08-29 16:01:04.450 +12:00 [INF] Expected value: CSharp
+2024-08-29 16:01:04.450 +12:00 [INF] columnName: Level
+2024-08-29 16:01:04.450 +12:00 [INF] Actual value: Intermediate
+2024-08-29 16:01:04.450 +12:00 [INF] Expected value: Intermediate
+2024-08-29 16:01:08.870 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:01:08.870 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:01:08.894 +12:00 [INF] The name of first Skill is: CSharp
+2024-08-29 16:01:09.525 +12:00 [INF] The deletion popup message is : CSharp has been deleted
+2024-08-29 16:01:09.534 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:01:09.707 +12:00 [INF] addSkillTable: 2666330
+2024-08-29 16:01:10.446 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:01:16.056 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:01:16.056 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:01:16.082 +12:00 [INF] The name of first Skill is: CSharp
+2024-08-29 16:01:16.721 +12:00 [INF] The deletion popup message is : CSharp has been deleted
+2024-08-29 16:01:16.732 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:01:16.909 +12:00 [INF] addSkillTable: 52783537
+2024-08-29 16:01:17.663 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:01:18.379 +12:00 [INF] ------------Get Skills Table From Webpage------------
+2024-08-29 16:01:19.163 +12:00 [INF] The number of Skills on the page: 1
+2024-08-29 16:01:19.220 +12:00 [INF] Get SkillName: CSharp
+2024-08-29 16:01:19.238 +12:00 [INF] Get SkillLevel: Intermediate
+2024-08-29 16:01:19.238 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:01:19.238 +12:00 [INF] Skill: CSharp
+2024-08-29 16:01:19.238 +12:00 [INF] Level: Intermediate
+2024-08-29 16:01:19.238 +12:00 [INF] 
+2024-08-29 16:01:19.238 +12:00 [INF] ------------Print Table------------
+2024-08-29 16:01:19.238 +12:00 [INF] Skill: CSharp
+2024-08-29 16:01:19.238 +12:00 [INF] Level: Intermediate
+2024-08-29 16:01:19.238 +12:00 [INF] 
+2024-08-29 16:01:19.238 +12:00 [INF] ------------Compare Tables------------
+2024-08-29 16:01:19.238 +12:00 [INF] tableA.Header.Count: 2
+2024-08-29 16:01:19.238 +12:00 [INF] tableB.Header.Count: 2
+2024-08-29 16:01:19.238 +12:00 [INF] tableA.Rows.Count: 1
+2024-08-29 16:01:19.238 +12:00 [INF] tableB.Rows.Count: 1
+2024-08-29 16:01:19.238 +12:00 [INF] Line number: 0
+2024-08-29 16:01:19.238 +12:00 [INF] columnName: Skill
+2024-08-29 16:01:19.238 +12:00 [INF] Actual value: CSharp
+2024-08-29 16:01:19.238 +12:00 [INF] Expected value: CSharp
+2024-08-29 16:01:19.238 +12:00 [INF] columnName: Level
+2024-08-29 16:01:19.238 +12:00 [INF] Actual value: Intermediate
+2024-08-29 16:01:19.238 +12:00 [INF] Expected value: Intermediate
+2024-08-29 16:01:23.703 +12:00 [INF] ------------Delete Stale Skills From Webpage------------
+2024-08-29 16:01:23.703 +12:00 [INF] Check the number of existing Skills: 1
+2024-08-29 16:01:23.729 +12:00 [INF] The name of first Skill is: CSharp
+2024-08-29 16:01:24.368 +12:00 [INF] The deletion popup message is : CSharp has been deleted
+2024-08-29 16:01:24.378 +12:00 [INF] Check the number of existing Skills: 0
+2024-08-29 16:01:24.564 +12:00 [INF] addSkillTable: 14513890
+2024-08-29 16:01:25.324 +12:00 [INF] The popup message is : CSharp has been added to your skills
+2024-08-29 16:01:25.477 +12:00 [INF] The name of first Skill is: CSharp
+2024-08-29 16:01:25.810 +12:00 [INF] The deletion popup message is : CSharp has been deleted
