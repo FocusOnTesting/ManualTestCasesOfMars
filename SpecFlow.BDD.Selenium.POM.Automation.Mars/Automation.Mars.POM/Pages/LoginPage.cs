@@ -24,7 +24,8 @@ namespace Automation.Mars.POM.Pages
         IAtWebElement Password => _idriver.FindElement(byPassword);
         IAtBy byLogin => GetBy(LocatorType.XPath, "//button[contains(text(),'Login')]");
         IAtWebElement Login => _idriver.FindElement(byLogin);
-        
+        string textNodeUserNameXPath = "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/text()";
+
         public LoginPage(IObjectContainer iobjectContainer)
             : base(iobjectContainer)
         {
@@ -44,8 +45,7 @@ namespace Automation.Mars.POM.Pages
             Password.Click();
             Password.SendKeys(_iappConfiguration.GetConfiguration("password"));
             Login.Click();
-
-            
+            _idriver.WaitForPageLoadAndTextNode(_idriver.GetWebDriver(), textNodeUserNameXPath);
         }
     }
 }

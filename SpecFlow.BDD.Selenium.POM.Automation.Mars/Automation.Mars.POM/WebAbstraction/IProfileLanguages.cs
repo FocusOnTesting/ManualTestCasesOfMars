@@ -9,6 +9,7 @@ namespace Automation.Mars.POM.WebAbstraction
 {
     public interface IProfileLanguages
     {
+        public void OpenProfileLanguages();
         public string GetGreeting();
         public string GetMyName();
         public void CleanUpLanguages();

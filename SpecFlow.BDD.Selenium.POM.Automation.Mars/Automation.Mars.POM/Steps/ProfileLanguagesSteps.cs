@@ -28,6 +28,12 @@ namespace Automation.Mars.POM.Steps
             _sc = sc;
         }
 
+        [Given(@"I am on the profile page languages section")]
+        public void GivenIAmOnTheProfilePageLanguagesSection()
+        {
+            _iprofilePageLanguages.OpenProfileLanguages();
+        }
+
         [When(@"Clean up languages")]
         public void WhenCleanUpLanguages()
         {

@@ -71,6 +71,13 @@ namespace Automation.Mars.POM.Pages
             _idriver = iobjectContainer.Resolve<IDriver>();
         }
 
+        public void OpenProfileLanguages()
+        {
+            _idriver.NavigateTo("http://localhost:5000/Account/Profile");
+            Profile.Click();
+            LanguageTab.Click();
+        }
+
         public string GetGreeting()
         {
 

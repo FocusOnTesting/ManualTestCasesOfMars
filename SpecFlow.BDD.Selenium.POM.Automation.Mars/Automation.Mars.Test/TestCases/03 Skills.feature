@@ -6,6 +6,7 @@ So that traders can know my Skills.
 
 Background: Clean up skills
 	Given Login with default credentials
+	And I am on the profile page skills section
 	When Clean up skills
 	Then No skill is in the table
 

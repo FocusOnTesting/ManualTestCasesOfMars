@@ -6,6 +6,7 @@ So that traders can know my Languages.
 
 Background: Clean up languages
 	Given Login with default credentials
+	And I am on the profile page languages section
 	When Clean up languages
 	Then No language is in the table
 

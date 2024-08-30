@@ -28,6 +28,13 @@ namespace Automation.Mars.POM.Steps
             _sc = sc;
         }
 
+        [Given(@"I am on the profile page skills section")]
+        public void GivenIAmOnTheProfilePageSkillsSection()
+        {
+            _iprofilePageSkills.OpenProfileSkills();
+        }
+
+
         [When(@"Clean up skills")]
         public void WhenCleanUpSkills()
         {
