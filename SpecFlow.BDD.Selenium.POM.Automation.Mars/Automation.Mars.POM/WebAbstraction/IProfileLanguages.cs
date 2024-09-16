@@ -16,6 +16,7 @@ namespace Automation.Mars.POM.WebAbstraction
         public void DeleteFirstLanguage();
         public int CountOfLanguages();
         public Table GetLanguagesTable();
+        public void RemoveLanguages(Table testTable);
         public void ClickAddNewButton();
         public void InputAddLanguageName(string name);
         public void SelectAddLanguageLevel(string level);

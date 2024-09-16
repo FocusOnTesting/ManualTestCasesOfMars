@@ -16,6 +16,7 @@ namespace Automation.Mars.POM.WebAbstraction
         public void DeleteFirstSkill();
         public int CountOfSkills();
         public Table GetSkillsTable();
+        public void RemoveSkills(Table testTable);
         public void ClickAddNewButton();
         public void InputAddSkillName(string name);
         public void SelectAddSkillLevel(string level);

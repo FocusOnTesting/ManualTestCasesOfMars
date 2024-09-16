@@ -57,6 +57,8 @@ namespace Automation.Mars.POM.Pages
         IAtWebElement CancelUpdateButton => _idriver.FindElement(byCancelUpdateButton);
         IAtBy byFirstSkillRemoveIcon => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i");
         IAtWebElement FirstSkillRemoveIcon => _idriver.FindElement(byFirstSkillRemoveIcon);
+        IAtBy bySkillRemoveIcon(int index) => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[" + index + "]/tr/td[3]/span[2]/i");
+        IAtWebElement SkillRemoveIcon(int index) => _idriver.FindElement(bySkillRemoveIcon(index));
         IAtBy byPopUpMsg => GetBy(LocatorType.XPath, "//div[contains(@class, \"ns-box-inner\")]");
         IAtWebElement PopUpMsg => _idriver.FindElement(byPopUpMsg);
         IAtBy byClosePopUp => GetBy(LocatorType.XPath, "//body/div[1]/a[1]");
@@ -165,6 +167,24 @@ namespace Automation.Mars.POM.Pages
             }
 
             return table;
+        }
+
+        public void RemoveSkills(Table testTable)
+        {
+            Log.Information("------------Remove Test Data------------");
+            foreach (var testTableRow in testTable.Rows)
+            {
+                Table skillTable = GetSkillsTable();
+                for (int i = 0; i < skillTable.Rows.Count; i++)
+                {
+                    if (testTableRow["Skill"].Equals(skillTable.Rows[i]["Skill"]))
+                    {
+                        Log.Information("Found it");
+                        SkillRemoveIcon(i + 1).Click();
+                        ClosePopUp.Click();
+                    }
+                }
+            }
         }
 
         public void ClickAddNewButton()

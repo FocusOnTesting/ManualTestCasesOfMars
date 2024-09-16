@@ -31,17 +31,9 @@ Scenario: TC_001 Add single skill with valid name and level
 		| Skill     | Level         |
 		| CSharp    | Beginner      |
 	Then Skills should be added successfully
-#	#And Clean up test skills
-
-
-#@Regression
-#Scenario: TC_002 Add four skills with valid name and level
-#	When I add skills
-#		| Skill     | Level         |
-#		| Java      | Beginner      |
-#		| Selenium	| Intermediate  |
-#		| Specflow  | Expert        |
-#	Then Skills should be added successfully
+    And Clean up test skills
+		| Skill     | Level         |
+		| CSharp    | Beginner      |
 
 
 @Negative @Regression
@@ -51,7 +43,9 @@ Scenario: TC_002 Add skill with duplicate name and valid level
 		| Java      | Beginner      |
 		| Java  	| Intermediate  |
 	Then Skills should not be added successfully
-
+	And Clean up test skills
+		| Skill     | Level         |
+		| Java      | Beginner      |
 
 @Negative @Regression
 Scenario: TC_003 Add skill with empty name and valid level
@@ -91,6 +85,9 @@ Scenario: TC_009 Update skill with new name
 		| Skill     | Level         |
 		| Java      | Beginner      |
 	Then Skills should be updated successfully
+	And Clean up test skills
+		| Skill     | Level         |
+		| Java      | Beginner      |
 
 
 @Regression
@@ -102,7 +99,9 @@ Scenario: TC_010 Update skill with new level
 		| Skill     | Level         |
 		| CSharp    | Intermediate  |
 	Then Skills should be updated successfully
-
+	And Clean up test skills
+		| Skill     | Level         |
+		| CSharp    | Intermediate  |
 
 @Smoke @Regression
 Scenario: TC_011 Update skill with valid name and level
@@ -113,7 +112,9 @@ Scenario: TC_011 Update skill with valid name and level
 		| Skill     | Level         |
 		| Java      | Intermediate  |
 	Then Skills should be updated successfully
-
+	And Clean up test skills
+		| Skill     | Level         |
+		| Java      | Intermediate  |
 
 @Regression
 Scenario: TC_013 Update skill with a duplicate name and different valid level
@@ -124,6 +125,9 @@ Scenario: TC_013 Update skill with a duplicate name and different valid level
 		| Skill     | Level         |
 		| CSharp    | Intermediate  |
 	Then Skills should be updated successfully
+	And Clean up test skills
+		| Skill     | Level         |
+		| CSharp    | Intermediate  |
 
 
 @Regression
@@ -135,6 +139,9 @@ Scenario: TC_014 Update skill without any change
 		| Skill     | Level         |
 		| CSharp    | Intermediate  |
 	Then An error message is displayed for updating skill operation
+	And Clean up test skills
+		| Skill     | Level         |
+		| CSharp    | Intermediate  |
 
 
 @Regression
@@ -147,7 +154,10 @@ Scenario: TC_018 Update skill then cancel
 	And I update a skill level '<Level>'
 	And I click cancel button of update skill
 	Then The skills shoud be the same as added
-	
+	And Clean up test skills
+	    | Skill     | Level         |
+		| CSharp    | Intermediate  |
+
 	Examples: 
 		| Skill     | Level     |
 		| Java      | Beginner  |

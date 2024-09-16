@@ -128,6 +128,7 @@ namespace Automation.Mars.POM.Steps
         [Then(@"Clean up test skills")]
         public void ThenCleanUpTestSkills(Table table)
         {
+            _iprofilePageSkills.RemoveSkills(table);
         }
 
         [When(@"I update skills")]

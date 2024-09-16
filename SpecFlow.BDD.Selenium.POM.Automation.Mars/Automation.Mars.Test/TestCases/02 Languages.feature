@@ -31,8 +31,9 @@ Scenario: TC_001 Add single language with valid name and level
 		| Language  | Level  |
 		| English   | Fluent |
 	Then Languages should be added successfully
-	#And Clean up test languages
-
+	And Clean up test languages
+		| Language  | Level  |
+		| English   | Fluent |
 
 @Regression
 Scenario: TC_002 Add four languages with valid name and level
@@ -43,6 +44,12 @@ Scenario: TC_002 Add four languages with valid name and level
 		| French    | Fluent           |
 		| Chinese   | Native/Bilingual |
 	Then Languages should be added successfully
+	And Clean up test languages
+		| Language  | Level            |
+		| English   | Basic            |
+		| Janpanese	| Conversational   |
+		| French    | Fluent           |
+		| Chinese   | Native/Bilingual |
 
 
 @Negative @Regression
@@ -52,6 +59,9 @@ Scenario: TC_003 Add language with duplicate name and valid level
 		| English   | Basic            |
 		| English   | Conversational   |
 	Then Languages should not be added successfully
+	And Clean up test languages
+		| Language  | Level            |
+		| English   | Basic            |
 
 
 @Negative @Regression
@@ -93,11 +103,10 @@ Scenario: TC_010 Update language with new name
 		| Language  | Level  |
 	    | French    | Fluent |
 	Then Languages should be updated successfully
-#	Then The record is updated to new language '<Language>' and level '<Level>'
-#
-#	Examples: 
-#	| Language  | Level  |
-#	| French    |        |
+	And Clean up test languages
+		| Language  | Level  |
+	    | French    | Fluent |
+
 
 
 @Regression
@@ -109,6 +118,9 @@ Scenario: TC_011 Update language with new level
 		| Language  | Level  |
 		| English   | Basic  |
 	Then Languages should be updated successfully
+	And Clean up test languages
+	    | Language  | Level  |
+		| English   | Basic  |
 
 
 @Smoke @Regression
@@ -120,7 +132,9 @@ Scenario: TC_012 Update language with valid name and level
 		| Language  | Level  |
 		| French    | Basic  |
 	Then Languages should be updated successfully
-
+	And Clean up test languages
+		| Language  | Level  |
+		| French    | Basic  |
 
 @Regression
 Scenario: TC_014 Update language with a duplicate name and different valid level
@@ -131,7 +145,8 @@ Scenario: TC_014 Update language with a duplicate name and different valid level
 		| Language  | Level  |
 		| Chinese   | Basic  |
 	Then Languages should be updated successfully
-
+	And Clean up test languages
+	    | Chinese   | Basic  |
 
 @Regression
 Scenario: TC_015 Update language without any change
@@ -142,7 +157,9 @@ Scenario: TC_015 Update language without any change
 		| Language  | Level   |
 	    | Chinese   | Fluent  |
 	Then An error message is displayed for updating language operation
-
+	And Clean up test languages
+		| Language  | Level   |
+	    | Chinese   | Fluent  |
 
 @Regression
 Scenario: TC_019 Update language then cancel
@@ -154,6 +171,9 @@ Scenario: TC_019 Update language then cancel
 	And I update a language level '<Level>'
 	And I click cancel button of updating language
 	Then The languages shoud be the same as added
+	And Clean up test languages
+	    | Language  | Level  |
+		| Chinese   | Fluent |
 	
 	Examples: 
 	| Language  | Level  |

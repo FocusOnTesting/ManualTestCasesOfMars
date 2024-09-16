@@ -4,6 +4,7 @@ using Automation.Mars.Core.DriverContext;
 using Automation.Mars.POM.WebAbstraction;
 using BoDi;
 using Microsoft.VisualBasic;
+using RazorEngine;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -57,6 +58,8 @@ namespace Automation.Mars.POM.Pages
         IAtWebElement CancelUpdateButton => _idriver.FindElement(byCancelUpdateButton);
         IAtBy byFirstLanguageRemoveIcon => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[2]/i");
         IAtWebElement FirstLanguageRemoveIcon => _idriver.FindElement(byFirstLanguageRemoveIcon);
+        IAtBy byLanguageRemoveIcon(int index) => GetBy(LocatorType.XPath, "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + index + "]/tr/td[3]/span[2]/i");
+        IAtWebElement LanguageRemoveIcon(int index) => _idriver.FindElement(byLanguageRemoveIcon(index));
         IAtBy byPopUpMsg => GetBy(LocatorType.XPath, "//div[contains(@class, \"ns-box-inner\")]");
         IAtWebElement PopUpMsg => _idriver.FindElement(byPopUpMsg);
         IAtBy byClosePopUp => GetBy(LocatorType.XPath, "//body/div[1]/a[1]");
@@ -163,6 +166,24 @@ namespace Automation.Mars.POM.Pages
             }
 
             return table;
+        }
+
+        public void RemoveLanguages(Table testTable)
+        {
+            Log.Information("------------Remove Test Data------------");
+            foreach (var testTableRow in testTable.Rows)
+            {
+                Table languagesTable = GetLanguagesTable();
+                for (int i = 0; i < languagesTable.Rows.Count; i++)
+                {
+                    if (testTableRow["Language"].Equals(languagesTable.Rows[i]["Language"]))
+                    {
+                        Log.Information("Found it");
+                        LanguageRemoveIcon(i+1).Click();
+                        ClosePopUp.Click();
+                    }
+                }
+            }
         }
 
         public void ClickAddNewButton()

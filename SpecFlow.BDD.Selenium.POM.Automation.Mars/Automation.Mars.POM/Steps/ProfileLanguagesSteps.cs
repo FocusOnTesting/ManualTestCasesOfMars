@@ -127,6 +127,7 @@ namespace Automation.Mars.POM.Steps
         [Then(@"Clean up test languages")]
         public void ThenCleanUpTestLanguages(Table table)
         {
+            _iprofilePageLanguages.RemoveLanguages(table);
         }
 
         [When(@"I update languages")]
