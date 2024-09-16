@@ -80,8 +80,16 @@ Scenario: TC_005 Add language with valid name and empty level
 	Then Languages should not be added successfully
 
 
+@Negative @Regression
+Scenario: TC_006 Add language in name with special characters
+	When I add languages
+		| Language  | Level  |
+		| /.,&*$#@  | Basic  |
+	Then Languages should not be added successfully
+
+
 @Smoke @Regression
-Scenario: TC_009 Add language then cancel
+Scenario: TC_010 Add language then cancel
 	When I click Add New button in Languages section
 	And I input a language '<Language>'
 	And I choose a language level '<Level>'
@@ -94,7 +102,7 @@ Scenario: TC_009 Add language then cancel
 
 
 @Regression
-Scenario: TC_010 Update language with new name
+Scenario: TC_011 Update language with new name
 	Given I add languages
 		| Language  | Level  |
 		| English   | Fluent |
@@ -110,7 +118,7 @@ Scenario: TC_010 Update language with new name
 
 
 @Regression
-Scenario: TC_011 Update language with new level
+Scenario: TC_012 Update language with new level
 	Given I add languages
 		| Language  | Level  |
 		| English   | Fluent |
@@ -124,7 +132,7 @@ Scenario: TC_011 Update language with new level
 
 
 @Smoke @Regression
-Scenario: TC_012 Update language with valid name and level
+Scenario: TC_013 Update language with valid name and level
 	Given I add languages
 		| Language  | Level  |
 		| English   | Fluent |
@@ -137,7 +145,7 @@ Scenario: TC_012 Update language with valid name and level
 		| French    | Basic  |
 
 @Regression
-Scenario: TC_014 Update language with a duplicate name and different valid level
+Scenario: TC_015 Update language with a duplicate name and different valid level
 	Given I add languages
 		| Language  | Level  |
 		| Chinese   | Fluent |
@@ -149,7 +157,7 @@ Scenario: TC_014 Update language with a duplicate name and different valid level
 	    | Chinese   | Basic  |
 
 @Regression
-Scenario: TC_015 Update language without any change
+Scenario: TC_016 Update language without any change
 	Given I add languages
 		| Language  | Level  |
 		| Chinese   | Fluent |
@@ -162,7 +170,7 @@ Scenario: TC_015 Update language without any change
 	    | Chinese   | Fluent  |
 
 @Regression
-Scenario: TC_019 Update language then cancel
+Scenario: TC_020 Update language then cancel
 	Given I add languages
 		| Language  | Level  |
 		| Chinese   | Fluent |
@@ -181,7 +189,7 @@ Scenario: TC_019 Update language then cancel
 
 
 @Regression
-Scenario: TC_020 Delete a language when there are fewer than 4 language items
+Scenario: TC_021 Delete a language when there are fewer than 4 language items
 	Given I add languages
 		| Language  | Level  |
 		| Chinese   | Fluent |

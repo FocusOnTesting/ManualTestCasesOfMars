@@ -63,8 +63,16 @@ Scenario: TC_004 Add skill with valid name and empty level
 	Then Skills should not be added successfully
 
 
+@Negative @Regression
+Scenario: TC_006 Add skill in name with special characters
+	When I add skills
+		| Skill     | Level    |
+		| /.,&*$#@  | Beginner |
+	Then Skills should not be added successfully
+
+
 @Smoke @Regression
-Scenario: TC_008 Add skill then cancel
+Scenario: TC_009 Add skill then cancel
 	When I click Add New button in Skills section
 	And I input a skill '<Skill>'
 	And I choose a skill level '<Level>'
@@ -77,7 +85,7 @@ Scenario: TC_008 Add skill then cancel
 
 
 @Regression
-Scenario: TC_009 Update skill with new name
+Scenario: TC_010 Update skill with new name
 	Given I add skills
 		| Skill     | Level         |
 		| CSharp    | Beginner      |
@@ -91,7 +99,7 @@ Scenario: TC_009 Update skill with new name
 
 
 @Regression
-Scenario: TC_010 Update skill with new level
+Scenario: TC_011 Update skill with new level
 	Given I add skills
 		| Skill     | Level         |
 		| CSharp    | Beginner      |
@@ -104,7 +112,7 @@ Scenario: TC_010 Update skill with new level
 		| CSharp    | Intermediate  |
 
 @Smoke @Regression
-Scenario: TC_011 Update skill with valid name and level
+Scenario: TC_012 Update skill with valid name and level
 	Given I add skills
 		| Skill     | Level         |
 		| CSharp    | Beginner      |
@@ -117,7 +125,7 @@ Scenario: TC_011 Update skill with valid name and level
 		| Java      | Intermediate  |
 
 @Regression
-Scenario: TC_013 Update skill with a duplicate name and different valid level
+Scenario: TC_014 Update skill with a duplicate name and different valid level
 	Given I add skills
 		| Skill     | Level         |
 		| CSharp    | Beginner      |
@@ -131,7 +139,7 @@ Scenario: TC_013 Update skill with a duplicate name and different valid level
 
 
 @Regression
-Scenario: TC_014 Update skill without any change
+Scenario: TC_015 Update skill without any change
 	Given I add skills
 		| Skill     | Level         |
 		| CSharp    | Intermediate  |
@@ -145,7 +153,7 @@ Scenario: TC_014 Update skill without any change
 
 
 @Regression
-Scenario: TC_018 Update skill then cancel
+Scenario: TC_019 Update skill then cancel
 	Given I add skills
 		| Skill     | Level         |
 		| CSharp    | Intermediate  |
@@ -164,7 +172,7 @@ Scenario: TC_018 Update skill then cancel
 
 
 @Regression
-Scenario: TC_020 Delete a skill
+Scenario: TC_021 Delete a skill
 	Given I add skills
 		| Skill     | Level         |
 		| CSharp    | Beginner      |
