@@ -88,6 +88,14 @@ Scenario: TC_006 Add language in name with special characters
 	Then Languages should not be added successfully
 
 
+@Negative @Regression
+Scenario: TC_007 Add language in name with huge length  inputs
+	When I add languages
+		| Language  | Level  |
+		| 0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789   |  Basic |
+	Then Languages should not be added successfully
+
+
 @Smoke @Regression
 Scenario: TC_010 Add language then cancel
 	When I click Add New button in Languages section

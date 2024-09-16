@@ -64,6 +64,14 @@ Scenario: TC_004 Add skill with valid name and empty level
 
 
 @Negative @Regression
+Scenario: TC_005 Add skill in name with huge length  inputs
+	When I add skills
+		| Skill  | Level  |
+		| 0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789   |  Beginner |
+	Then Skills should not be added successfully
+
+
+@Negative @Regression
 Scenario: TC_006 Add skill in name with special characters
 	When I add skills
 		| Skill     | Level    |
